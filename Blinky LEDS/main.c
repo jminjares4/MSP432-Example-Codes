@@ -15,8 +15,8 @@ void main(void)
 
 	while(1){
 	    P1->OUT = BIT0;
-	    __delay_cycles(1000000);
+	    __delay_cycles(500000);
 	    P1->OUT &= ~(BIT0);
-	    __delay_cycles(1000000);
+	    __delay_cycles(500000);
 	}
 }
