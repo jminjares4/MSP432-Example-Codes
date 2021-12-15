@@ -1,5 +1,5 @@
 # **MSP432-Example-Codes :zap:**
-
+## *Description*
 This repository will contain various examples of TI MSP432 Microcontroller.
 
 ## Authors:
