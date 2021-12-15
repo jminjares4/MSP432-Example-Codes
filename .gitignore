@@ -58,6 +58,17 @@ Release/*
 .xdchelp
 config/*
 .launches/*
+.jxbrowser.userdata
+.metadata
+dvt
+RemoteSystemsTempFiles
+.settings
+Debug
+targetConfigs
+.ccsproject
+.cproject
+.project
+
 
 # VS Code 
 .vscode 
