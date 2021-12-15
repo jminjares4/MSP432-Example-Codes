@@ -1,6 +1,5 @@
 #include "msp.h"
 
-
 /**
  * main.c
  */
@@ -10,8 +9,6 @@ void main(void)
 
 	P1->DIR |= BIT0;
 	P1->OUT &= ~(BIT0);
-
-
 
 	while(1){
 	    P1->OUT = BIT0;
