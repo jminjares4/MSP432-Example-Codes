@@ -5,5 +5,5 @@
 ## Authors:
   - Jesus Minjares
     - Master of Science in Computer Engineering
-  - JOrge Minjares
+  - Jorge Minjares
     - Bachelor of Science in Electrical Engineering
