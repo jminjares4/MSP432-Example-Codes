@@ -68,6 +68,7 @@ targetConfigs
 .ccsproject
 .cproject
 .project
+.launches
 
 
 # VS Code 
