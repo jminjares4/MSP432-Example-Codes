@@ -1,7 +1,7 @@
 # **Blinky LEDs :zap:**
 
 ## Description
-This code will just turn an `P1.0` onboard LED, which is the RED onboard led of the MSP432 at the register level. 
+This code toggles the `on-board LEDs` to blink at a rate of 500000 cycles. 
 
 ## Pinout
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
