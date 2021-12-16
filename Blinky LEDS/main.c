@@ -20,10 +20,8 @@ void main(void)
 	// Initialze P1.0 as output
 	P1->DIR |= BIT0;
 	// clear BIT0
-
 	P1->OUT &= ~(BIT0);
 	// Clear secondary functions
-
 	P1->SEL1 &= ~(BIT0);
 	P1->SEL2 &= ~(BIT0);
 
