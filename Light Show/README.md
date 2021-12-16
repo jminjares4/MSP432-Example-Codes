@@ -10,11 +10,14 @@ This program will demostrate how to use external GPIOs to create a lightshow.
 ## LEDs 
 | Color | Voltage (V) | Current (mA) |
 |:---   | :---:       |     ---:     |
-| <span style="color:red;">Red</span>  | 1.8-2.4     |      20      |
-| <span style="color:yellow;">Yellow</span>| 2.0-2.2     |      20      |
-| <span style="color:green;">Green</span> | 3.0-3.4     |      20      |
-|  <span style="color:blue;">Blue</span> | 3.0-3.4     |      20      | 
-|  <span style="color:white;">White</span>| 3.0-3.4     |      20      |
+| Red   | 1.8-2.4     |      20      |
+| Yellow| 2.0-2.2     |      20      |
+| Green | 3.0-3.4     |      20      |
+| Blue  | 3.0-3.4     |      20      | 
+| White | 3.0-3.4     |      20      |
+
+
+
 
 ## Authors:
   - Jesus Minjares :zap:
