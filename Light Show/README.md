@@ -25,12 +25,12 @@ BIT shift as the name states will manipulate the bit by shift them according. Fo
 - Left Bit Shift
 ~~~c
 uint8_t x = 0x01 << 0; //shift 0x01 by 0
-uint8_t y = 0x01 << 1; //shigt 0x01 by 1 -> 0x02
+uint8_t y = 0x01 << 1; //shift 0x01 by 1 -> 0x02
 ~~~
 - Right Bit Shift 
 ~~~c
 uint8_t x = 0x10 >> 0; //shift 0x10 by 0 -> 0x10
-uint8_t y = 0x10 >> 1; //shigt 0x10 by 1 -> 0x40
+uint8_t y = 0x10 >> 1; //shift 0x10 by 1 -> 0x40
 ~~~
 ## Authors:
   - Jesus Minjares :zap:
