@@ -2,6 +2,12 @@
 ## *Description*
 This repository will contain various examples of TI MSP432 Microcontroller.The purpose of these codes is to provide various examples of how to use the MSP432P401R at the register level. There are not many sources for the MSP432P401R, therefore I developed simple and straight-to-the-point examples. Each of the examples has the most useful setup for the most common peripherals for Microprocessor 1.
 
+## Code Examples
+ -[Blinky LEDS](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/Blinky%20LEDS)
+ -[Hello World](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/Hellow%20World)
+ -[Light Show](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/Light%20Show)
+ -[RGB LEDs](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/RGB%20LEDs)
+
 ## Good Books for MSP432P401R
 [TI MSP432 ARM Programming for Embedded Systems](https://www.amazon.com/MSP432-Programming-Embedded-Systems-books/dp/0997925914)
 * Highly recommend for a good introductory to MSP432P401R 
