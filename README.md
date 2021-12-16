@@ -4,7 +4,7 @@ This repository will contain various examples of TI MSP432 Microcontroller.The p
 
 ## Code Examples
  - [Blinky LEDS](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/Blinky%20LEDS)
- - [Hello World](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/Hellow%20World) 
+ - [Hello World](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/Hello%20World) 
  - [Light Show](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/Light%20Show)
  - [RGB LEDs](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/RGB%20LEDs)
 
