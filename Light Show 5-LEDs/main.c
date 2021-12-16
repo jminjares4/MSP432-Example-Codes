@@ -39,44 +39,6 @@ void lightShow(lightshow_t myLight){
     __delay_cycles(250000);
 }
 
-//
-//void ledChaserUp(void){
-//    int i;
-//    for(i = 0; i < 8; i++){
-//      P4->OUT = BIT0 << i;
-//      __delay_cycles(250000);
-//    }
-//}
-//void ledChaserDown(void){
-//    int i;
-//    for(i = 0; i < 8; i++){
-//       P4->OUT = BIT7 >> i;
-//       __delay_cycles(250000);
-//    }
-//}
-//void ledSweeperUp(void){
-//    int i;
-//    for(i = 0; i < 8; i++){
-//       P4->OUT |= BIT0 << i;
-//       __delay_cycles(250000);
-//    }
-//}
-//void ledSweeperDown(void){
-//    int i;
-//    P4->OUT &= ~(0xFF);
-//    for(i = 0; i < 8; i++){
-//        P4->OUT |= BIT7 >> i;
-//        __delay_cycles(250000);
-//    }
-//}
-//void ledToggle(void){
-//    int i;
-//    for(i=0; i<2*3; i++){
-//       P4->OUT ^= 0xFF;
-//       __delay_cycles(1000000);
-//    }
-//}
-
 void main(void)
 {
 	WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;		// stop watchdog timer
