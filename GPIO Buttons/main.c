@@ -22,11 +22,11 @@ void main(void)
 	P4->SEL0 &= ~(BIT0);
 	P4->SEL1 &= ~(BIT0);
 	P4->REN |= BIT0;
-
-	while(1){
+	//infinite loop
+	while(1){ 
 		if((P4->IN & BIT0) == 0x00){ // 1 -> 0
 			P1->OUT = BIT0;	
-		}else if((P6->IN & BIT0) == BIT0){ // 0 - >
+		}else if((P6->IN & BIT0) == BIT0){ // 0 - > 1
 			P1->OUT &= ~(BIT0);
 		}else{
 			__delay_cycles(10000); //small delay 
