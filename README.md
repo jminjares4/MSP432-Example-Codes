@@ -8,13 +8,14 @@ This repository will contain various examples of TI MSP432 Microcontroller.The p
 
 [Learning Embedded Systems with MSP432 microcontrollers: MSP432P401R with Code Composer Studio](https://www.amazon.com/Learning-Embedded-Systems-MSP432-microcontrollers/dp/B08FV1XTVJ)
 * Volume 1 and 2 are good as they go straight examples for quick development
-### Note
- ~~~c
- printf("Go Miners!\n");
- ~~~
 
 ## Authors:
   - Jesus Minjares :zap:
     - Master of Science in Computer Engineering
   - Jorge Minjares :zap:
     - Bachelor of Science in Electrical Engineering
+
+### Special Message
+ ~~~c
+ printf("Go Miners!\n");
+ ~~~
