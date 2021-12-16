@@ -7,6 +7,7 @@ This repository will contain various examples of TI MSP432 Microcontroller.The p
  - [Hello World](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/Hello%20World) 
  - [Light Show](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/Light%20Show)
  - [RGB LEDs](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/RGB%20LEDs)
+ - [GPIO Buttons](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/GPIO%20Buttons)
 
 ## Good Books for MSP432P401R
 [TI MSP432 ARM Programming for Embedded Systems](https://www.amazon.com/MSP432-Programming-Embedded-Systems-books/dp/0997925914)
