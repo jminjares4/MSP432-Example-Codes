@@ -24,7 +24,7 @@ When using `LEDs`, you must use current limit resistor to avoid  buring the led.
 BIT shift as the name states will manipulate the bit by shift them according. For instance, `<<` will shift the bits to the left and `>>` shift the bits to the right.
 - Left Bit Shift
 ~~~c
-uint8_t x = 0x01 << 0; //shift 0x01 by 0
+uint8_t x = 0x01 << 0; //shift 0x01 by 0 -> 0x01
 uint8_t y = 0x01 << 1; //shift 0x01 by 1 -> 0x02
 ~~~
 - Right Bit Shift 
