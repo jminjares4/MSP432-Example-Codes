@@ -5,7 +5,7 @@ This program will demostrate how to use external GPIOs to create a lightshow.
 
 ## Pinout
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
-    - Texas Instrument
+- Texas Instrument
 
 ## Current Limit Resistor
 When using `LEDs`, you must use current limit resistor to avoid  buring the led. Therefore with the use of *ohm's law*, **V = I*R** we can find the resistor to be used based on the table below. Typically 220 ohm do the job, however 330 is a safe bet!

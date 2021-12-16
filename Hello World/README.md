@@ -5,7 +5,7 @@ This code will just turn an `P1.0` onboard LED, which is the RED onboard led of 
 
 ## Pinout
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
-    - Texas Instrument
+   - Texas Instrument
 ## Binary Operators
 
 - Binary OR Operator
