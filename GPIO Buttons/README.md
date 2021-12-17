@@ -12,7 +12,7 @@ This program will demostrate how to use GPIO inputs to turn on and off the exter
 | :---: | :---: | :---: |     :---         |     
 | 0     | 0     |  x    |  Input           |
 | 0     | 1     |  0    |  Input with pulldown resistor  |
-| 0     | 1     |  1    |  Input with pulldown resistor |
+| 0     | 1     |  1    |  Input with pullup resistor |
 | 1     | x     |  x    |  Output         |
   * I/O Configuration
 
