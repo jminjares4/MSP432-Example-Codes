@@ -16,7 +16,7 @@ This program will demostrate how to use GPIO inputs to turn on and off the exter
 | 1     | x     |  x    |  Output         |
   * I/O Configuration
 
-### **Pull-up and Pull-down Configuration**
+## **Pull-up and Pull-down Configuration**
 
 <img width="413" alt="button configuation" src="https://user-images.githubusercontent.com/60948298/144836131-96f04e0f-c7f7-443f-b35c-814fb9db4e29.png">
 

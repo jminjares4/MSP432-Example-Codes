@@ -22,7 +22,7 @@ When using `LEDs`, you must use current limit resistor to avoid  buring the led.
 ## LEDs Circuit
 <img src="https://user-images.githubusercontent.com/60948298/146442932-b87b92c4-9241-40eb-b26e-057f261b8fbc.png" width="450" height="250">
 
-## BIt Shift
+## Bit Shift
 Bit shift as the name states will manipulate the bit by shift them according. For instance, `<<` will shift the bits to the left and `>>` shift the bits to the right.
 - Left Bit Shift
 ~~~c

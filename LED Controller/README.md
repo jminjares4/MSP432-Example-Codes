@@ -28,7 +28,7 @@ This program will demostrate how to use GPIO inputs to select different led sequ
 ## LEDs Circuit
 <img src="https://user-images.githubusercontent.com/60948298/146442932-b87b92c4-9241-40eb-b26e-057f261b8fbc.png" width="450" height="250">
 
-### **Pull-up and Pull-down Configuration**
+## **Pull-up and Pull-down Configuration**
 
 <img width="413" alt="button configuation" src="https://user-images.githubusercontent.com/60948298/144836131-96f04e0f-c7f7-443f-b35c-814fb9db4e29.png">
 
