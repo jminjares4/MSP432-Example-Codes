@@ -2,7 +2,7 @@
  * @file main.c
  * @author Jesus Minjares (https://github.com/jminjares4)
  * @author Jorge Minjares (https://github.com/JorgeMinjares)
- * @brief This program will demostrate how to use external GPIOs to create a lightshow.
+ * @brief This program will demostrate how to use external GPIOs to control a lightshow.
  * @version 0.1
  * @date 2021-12-15
  *
@@ -24,7 +24,7 @@ typedef enum {
     LED_OFF = 5,
 }lightshow_t;
 
-
+// Macro for buttons
 #define BUTTON_1 BIT5
 #define BUTTON_2 BIT6
 #define BUTTON_3 BIT7
