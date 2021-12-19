@@ -47,6 +47,7 @@ void PORT4_IRQHandler(void){
     if(P4->IFG & BIT1){
         P2->OUT &= ~(BLUE);
     }
+
     P4->IFG &= ~(BIT0|BIT1);
 }
 
