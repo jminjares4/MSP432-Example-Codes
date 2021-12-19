@@ -33,8 +33,8 @@ void main(void)
     //Clear all onbaard LEDs 
     P2->OUT &= ~(BIT0 | BIT1 | BIT2);
     //Clear all secondary funcitons pins
+    P2->SEL0 &= ~(BIT0 | BIT1 | BIT2);
     P2->SEL1 &= ~(BIT0 | BIT1 | BIT2);
-    P2->SEL2 &= ~(BIT0 | BIT1 | BIT2);
 
     while (1) //all embedded system must have an infinite loop
     {
