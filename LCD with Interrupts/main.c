@@ -10,42 +10,46 @@ void main(void)
 
 	lcdInit();
 	lcdClear();
-
+	//
 	P2->DIR |= 0x07;
-	P2->DIR &= ~(0xF0);
-	P2->OUT &= ~(0xF7);
-	P2->REN |= 0xF0;
-	P2->SEL0 &= ~(0xF7);
-	P2->SEL1 &= ~(0xF7);
+	P2->OUT &= ~(0x07);
+//	P2->REN |= 0xF0;
+	P2->SEL0 &= ~(0x07);
+	P2->SEL1 &= ~(0x07);
 
 
-	P2->IE |= 0xF0;
-	P2->IES &= ~(0xF0);
-	P2->IFG &= ~(0xF0);
+	//Pull-down setp up DIR REN OUT : 0 1 0
+	P5->DIR &= ~(0x07);
+	P5->REN |= 0x07;
+	P5->OUT &= ~(0x07);
+	P5->SEL0 &= ~(0x07);
+	P5->SEL1 &= ~(0x07);
+	//interrupt setup
+	P5->IE |= 0x07;
+	P5->IES &= ~(0x07);
+	P5->IFG &= ~(0x07);
 
-	NVIC->ISER[1] = 1 << ((PORT2_IRQn) & 31);
+	NVIC->ISER[1] = 1 << ((PORT5_IRQn) & 31);
 
 	__enable_irq();
 
 	lcdSetText("Led Controller",0,0);
-	while(1){}
+	while(1){
+	    __delay_cycles(100000);
+	}
 }
-void PORT2_IRQHandler(void){
-    if(P2->IFG & BIT4){
+void PORT5_IRQHandler(void){
+    if(P5->IFG & BIT0){
         lcdSetText("Led Red on   ",0,1);
         P2->OUT = BIT0;
     }
-    if(P2->IFG & BIT5){
+    if(P5->IFG & BIT1){
         lcdSetText("Led Green on ",0,1);
         P2->OUT = BIT1;
     }
-    if(P2->IFG & BIT6){
-        lcdSetText("Led Blue on  ",0,1);
-        P2->OUT = BIT2;
-    }
-    if(P2->IFG & BIT7){
-        lcdSetText("Led off       ",0,1);
+    if(P5->IFG & BIT2){
+        lcdSetText("Led off         ",0,1);
         P2->OUT &= ~(0x07);
     }
-    P2->IFG &= ~(0xF0);
+    P5->IFG &= ~(0x07);
 }
