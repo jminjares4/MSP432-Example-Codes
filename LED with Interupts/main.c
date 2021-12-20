@@ -47,21 +47,22 @@ void main(void)
 
 void PORT4_IRQHandler(void)
 {
-	if (P4->IFG & BIT0)
+	uint8_t result = P4->IFG; //store P4->IFG
+	if (result & BIT0)
 	{						// check bit 0
 		P2->OUT &= ~(0x0F); // clear all bits
 	}
-	if (P4->IFG & BIT1)
+	if (result & BIT1)
 	{					// check bit 1
 		P2->OUT |= RED; // set RED led
 	}
-	if (P4->IFG & BIT2)
+	if (result & BIT2)
 	{					  // check bit 2
 		P2->OUT |= GREEN; // set GREEN led
 	}
-	if (P4->IFG & BIT3)
+	if (result & BIT3)
 	{					 // check bit 3
 		P2->OUT |= BLUE; // set BLUE led
 	}
-	P4->IFG &= ~(0x0F); // clear all bits on the interrupt flag
+	P4->IFG &= ~(result); // clear all bits on the interrupt flag
 }
