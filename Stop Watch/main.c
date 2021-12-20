@@ -1,11 +1,24 @@
+/**
+ * @file main.c
+ * @author Jesus Minjares (https://github.com/jminjares4)
+ * @author Jorge Minjares (https://github.com/JorgeMinjares)
+ * @brief Create a stop watch using SysTick, Interrupts and display the time with the LCD
+ * @version 0.1
+ * @date 2021-12-20
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #include "msp.h"
 #include "lcdLib.h"
 
+//Custom structure 
 typedef struct {
-    uint16_t millisec;
-    uint8_t sec;
-    uint8_t min;
-    uint8_t hour;
+    uint16_t millisec; //hold the milliseconds 
+    uint8_t sec; //hold the seconds 
+    uint8_t min; // holds the minutes 
+    uint8_t hour; // holds the hours 
 }StopWatch_t;
 
 // set intial values
@@ -14,27 +27,26 @@ StopWatch_t myWatch = {.millisec = 0, .sec = 0, .min = 0, .hour = 0};
 void main(void)
 {
     WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;     // stop watchdog timer
+    //Initialize the LCD 
     lcdInit();
     lcdClear();
-    //Pull down set up using Port 4 bit 0
-    P5->DIR &= ~(0x07);
-    P5->OUT &= ~(0x07);
-    P5->REN |= 0x07;
-    //Pull up set up using port 4 bit 1
-    //Bit clear sel0 and sel1 for port 4
-    P5->SEL0 &= ~(0x07);
-    P5->SEL1 &= ~(0x07);
-    //enable interrupts for port 4
-    P5->IE |= 0x07;
-    //set bit 0 IES as rising edge
-    P5->IES &= ~(0x07);
-    //set Interrupt flag as 0
-    P5->IFG &= ~(0x07);
-    //SysTick bit 0: Enable SysTick and bit 2: Clock Source --
-    //BIT0|BIT2 = 0x05
-    SysTick->CTRL = 0x05;
-    SysTick->VAL = 1 - 1;
-    SysTick->LOAD = 3000;
+
+    //Input 
+    P5->DIR &= ~(BIT0|BIT1|BIT2); //set 0x07 as INPUTs 
+    P5->OUT &= ~(BIT0|BIT1|BIT2); //set 0x07 as pull-down
+    P5->REN |= BIT0|BIT1|BIT2; // enable resistors 
+    //clear secondary functions
+    P5->SEL0 &= ~(BIT0|BIT1|BIT2);
+    P5->SEL1 &= ~(BIT0|BIT1|BIT2);
+    //Interrupt Configuration
+    P5->IE |= BIT0|BIT1|BIT2; //enable 0x07 as interrupts 
+    P5->IES &= ~(BIT0|BIT1|BIT2); // enable 0x07 as rising edges 
+    P5->IFG &= ~(BIT0|BIT1|BIT2); // clear all bits from the flag
+
+    //SysTick Configuration
+    SysTick->CTRL = 0x05; // CLKSRC | ENABLE, interrupt disable 
+    SysTick->VAL = 1 - 1; // clear value register 
+    SysTick->LOAD = 3000 - 1; // set at 1ms 
 
     //Enable NVIC
     NVIC->ISER[1] = 1 << ((PORT5_IRQn)&31);
@@ -44,38 +56,40 @@ void main(void)
     lcdSetText("Stopwatch      ",5,0);
     //infinite loop for embedded system
     while(1){
-    //    10:10:05:0000
+        //set custom text
         char buffer[16];
         sprintf(buffer, "%2u:%2u:%2u:%2u",myWatch.hour,myWatch.min,myWatch.sec,myWatch.millisec);
         lcdSetText(buffer,1,1);
     }
 }
-//
+
 void SysTick_Handler(void){
-    if(myWatch.millisec++ >= 999){
-        myWatch.millisec = 0;
-        if(myWatch.sec++ >= 59){
-            myWatch.sec = 0;
-            if(myWatch.min++ >= 59){
-                myWatch.min = 0;
-                if(myWatch.hour++ >= 23){
-                    myWatch.hour = 0;
+    if(myWatch.millisec++ >= 999){ //check after 1 second 
+        myWatch.millisec = 0; //clear millisecond
+        if(myWatch.sec++ >= 59){ //check after a minute 
+            myWatch.sec = 0; // clear seconds 
+            if(myWatch.min++ >= 59){ //check after an hour 
+                myWatch.min = 0; // clear minutes 
+                if(myWatch.hour++ >= 23){ //check after 24
+                    myWatch.hour = 0; //clear hours 
                 }
             }
         }
     }
 }
 void PORT5_IRQHandler(void){
-    if(P5->IFG & BIT0){ //Start stop-watch
-        SysTick->CTRL &= ~(0x02);
+    uint8_t result = P5->IFG; //store the P5->IFG 
+    if(result & BIT0){ //Start stop-watch
+        SysTick->CTRL &= ~(0x02); //disable interrupt, stop timer
     }
-    if(P5->IFG & BIT1){//Stop stop-watch
-        SysTick->CTRL |= 0x02;
+    if(result & BIT1){//Stop stop-watch
+        SysTick->CTRL |= 0x02; //enable interrupt, start timer
     }
-    if(P5->IFG & BIT2){//Reset stop-watch
+    if(result & BIT2){//Reset stop-watch
+        //clear data structure
         myWatch.millisec = 0, myWatch.sec = 0, myWatch.min = 0,  myWatch.hour = 0;
         lcdClear();
         lcdSetText("Stopwatch      ",5,0);
     }
-    P5->IFG &= ~(0x07);
+    P5->IFG &= ~(result); //clear flag
 }
