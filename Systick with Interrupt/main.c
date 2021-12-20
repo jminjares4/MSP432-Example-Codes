@@ -54,7 +54,7 @@ void main(void)
 	//infinite loop for embedded system
 	while(1){}
 }
-//
+
 void SysTick_Handler(void){
 	//100ms * 5 -> .5 seconds 
     if(tic++ > 5){  //check if .5 seconds have passed
@@ -62,6 +62,7 @@ void SysTick_Handler(void){
         tic = 0; //reset counter
     }
 }
+
 void PORT4_IRQHandler(void){
     if(P4->IFG & BIT0){ //check for BIT0
         SysTick->CTRL |= 0x02; //enable SysTick Interrupt
