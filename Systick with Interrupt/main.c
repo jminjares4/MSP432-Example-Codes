@@ -64,11 +64,12 @@ void SysTick_Handler(void){
 }
 
 void PORT4_IRQHandler(void){
-    if(P4->IFG & BIT0){ //check for BIT0
+	uint8_t result = P4->IFG; //store P4->IFG
+    if(result & BIT0){ //check for BIT0
         SysTick->CTRL |= 0x02; //enable SysTick Interrupt
     }
-    if(P4->IFG & BIT1){ //check for BIT1
+    if(result & BIT1){ //check for BIT1
         SysTick->CTRL &= ~(0x02); //disable SysTick Interrupt
     }
-    P4->IFG &= ~(BIT0|BIT1); //clear all bits of interrupt flag
+    P4->IFG &= ~(result); //clear bits of interrupt flag
 }
