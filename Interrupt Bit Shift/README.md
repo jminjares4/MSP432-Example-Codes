@@ -16,7 +16,7 @@ This program will demostrate how to use interrupts and control a global variable
 | 1     | x     |  x    |  Output         |
   * I/O Configuration
 
-## MPS432 Interruot Configuration Table
+## MPS432 Interrupt Configuration Table
 | PxIE  | PxIES | PxIFG | I/O Configuration  |
 | :---: | :---: | :---: |     :---           |     
 | 1     | 0     |  0    |  Pull-down         |
