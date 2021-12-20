@@ -59,13 +59,14 @@ void main(void)
 	}
 }
 void PORT4_IRQHandler(void){
-    if(P4->IFG & BIT0){ //check for bit 0
+	uint8_t result = P4->IFG; //store P4->IFG
+    if(result & BIT0){ //check for bit 0
         index = 0; //set index for OFF
     }
-    if(P4->IFG & BIT1) //check for bit 1
+    if(result & BIT1) //check for bit 1
         if(index-- <= 1) index = 1; //check boundary
-    if(P4->IFG & BIT2) //check for bit 2
+    if(result & BIT2) //check for bit 2
         if(index++ >= 7) index = 7; // check boundary
 	//clear all the bits in the flag
-    P4->IFG &= ~(0x07);
+    P4->IFG &= ~(result);
 }
