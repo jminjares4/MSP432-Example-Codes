@@ -39,17 +39,18 @@ void main(void)
 	}
 }
 void PORT5_IRQHandler(void){
-    if(P5->IFG & BIT0){
+    uint8_t result = P5->IFG;
+    if(result & BIT0){
         lcdSetText("Led Red on   ",0,1);
         P2->OUT = BIT0;
     }
-    if(P5->IFG & BIT1){
+    if(result & BIT1){
         lcdSetText("Led Green on ",0,1);
         P2->OUT = BIT1;
     }
-    if(P5->IFG & BIT2){
+    if(result & BIT2){
         lcdSetText("Led off         ",0,1);
         P2->OUT &= ~(0x07);
     }
-    P5->IFG &= ~(0x07);
+    P5->IFG &= ~(result);
 }
