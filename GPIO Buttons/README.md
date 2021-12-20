@@ -8,7 +8,7 @@ This program will demostrate how to use GPIO inputs to turn on and off the exter
 - Texas Instrument
 
 ## **MSP432 I/O Configuration Table** 
-| PxDIR | PxREN | PxOUT | I/O Configuration|
+| **PxDIR** | **PxREN** | **PxOUT** | **I/O Configuration**|
 | :---: | :---: | :---: |     :---         |     
 | 0     | 0     |  x    |  Input           |
 | 0     | 1     |  0    |  Input with pulldown resistor  |
