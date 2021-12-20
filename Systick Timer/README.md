@@ -1,14 +1,14 @@
 # **SysTick Timer :zap:**
 
-## Description
+## **Description**
 This program will demostrate how to use SysTick to create periodic tasks. The following code will toggle
 the onboard led every 5 seconds.
 
-## Pinout
+## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
 - Texas Instrument
 
-## MPS432 SysTick Configuration Table
+## **MPS432 SysTick Configuration Table**
 | Bit  | Name              | Descriptions |
 | :---: | :---:            | :--- |        
 | 0     | ENABLE           | Enable <br> 0: the counter is disabled<br> 1:enables SysTick to begin counting down|  
@@ -23,7 +23,7 @@ SysTick->VAL = 0; //clear value register
 SysTick->LOAD  = 3000000 - 1; // 1 sec period, N - 1, load is 24 bit register->max = 0xFFFFFF 
 ~~~
 
-## Authors:
+## **Authors:**
   - Jesus Minjares :zap:
     - Master of Science in Computer Engineering
   - Jorge Minjares :zap:

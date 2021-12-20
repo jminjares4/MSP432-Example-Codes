@@ -8,7 +8,7 @@ This program will demostrate how to use GPIO inputs to select different led colo
 - Texas Instrument
 
 ## MSP432 I/O Configuration Table 
-| PxDIR | PxREN | PxOUT | I/O Configuration|
+| **PxDIR** | **PxREN** | **PxOUT** | **I/O Configuration**|
 | :---: | :---: | :---: |     :---         |     
 | 0     | 0     |  x    |  Input           |
 | 0     | 1     |  0    |  Input with pulldown resistor  |
@@ -17,7 +17,7 @@ This program will demostrate how to use GPIO inputs to select different led colo
   * I/O Configuration
 
 ## MPS432 Interrupt Configuration Table
-| PxIE  | PxIES | PxIFG | I/O Configuration  |
+| **PxIE**  | **PxIES** | **PxIFG** | **I/O Configuration**  |
 | :---: | :---: | :---: |     :---           |     
 | 1     | 0     |  0    |  Pull-down         |
 | 1     | 1     |  0    |  Pull-up           |
@@ -25,7 +25,7 @@ This program will demostrate how to use GPIO inputs to select different led colo
   * Interrupt Configuration
 
 ## LEDs 
-| Color | Voltage (V) | Current (mA) |
+| **Color** | **Voltage (V)** | **Current (mA)** |
 |:---   | :---:       |     ---:     |
 | Red   | 1.8-2.4     |      20      |
 | Yellow| 2.0-2.2     |      20      |
@@ -40,7 +40,7 @@ This program will demostrate how to use GPIO inputs to select different led colo
 
 <img width="413" alt="button configuation" src="https://user-images.githubusercontent.com/60948298/144836131-96f04e0f-c7f7-443f-b35c-814fb9db4e29.png">
 
-## Authors:
+## **Authors:**
   - Jesus Minjares :zap:
     - Master of Science in Computer Engineering
   - Jorge Minjares :zap:

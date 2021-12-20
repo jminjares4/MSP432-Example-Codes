@@ -10,7 +10,7 @@ such as changing the P4X registers to P4->X as well as renaming the library. `lc
 - Texas Instrument
 
 ## **MSP432 I/O Configuration Table** 
-| PxDIR | PxREN | PxOUT | I/O Configuration|
+| **PxDIR** | **PxREN** | **PxOUT** | **I/O Configuration**|
 | :---: | :---: | :---: |     :---         |     
 | 0     | 0     |  x    |  Input           |
 | 0     | 1     |  0    |  Input with pulldown resistor  |
@@ -19,7 +19,7 @@ such as changing the P4X registers to P4->X as well as renaming the library. `lc
   * I/O Configuration
 
 ## **MSP432 Interrupt Configuration Table**
-| PxIE  | PxIES | PxIFG | I/O Configuration  |
+| **PxIE**  | **PxIES** | **PxIFG** | **I/O Configuration**  |
 | :---: | :---: | :---: |     :---           |     
 | 1     | 0     |  0    |  Pull-down         |
 | 1     | 1     |  0    |  Pull-up           |

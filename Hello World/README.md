@@ -1,12 +1,12 @@
 # **Hello World! :zap:**
 
-## Description
+## **Description**
 This code will just turn an `P1.0` onboard LED, which is the RED onboard led of the MSP432 at the register level. 
 
-## Pinout
+## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
    - Texas Instrument
-## Binary Operators
+## **Binary Operators**
 
 - Binary OR Operator
     ~~~c
@@ -81,7 +81,7 @@ The following function is a special function that is use to create some delay by
 __delay_cycles(cpu_clock_cycles);
 ~~~
 
-## Authors:
+## **Authors:**
   - Jesus Minjares :zap:
     - Master of Science in Computer Engineering
   - Jorge Minjares :zap:
