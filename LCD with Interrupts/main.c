@@ -11,23 +11,22 @@ void main(void)
 	lcdInit();
 	lcdClear();
 	//
-	P2->DIR |= 0x07;
-	P2->OUT &= ~(0x07);
-//	P2->REN |= 0xF0;
-	P2->SEL0 &= ~(0x07);
-	P2->SEL1 &= ~(0x07);
+	P2->DIR |= BIT0|BIT1|BIT2;
+	P2->OUT &= ~(BIT0|BIT1|BIT2);
+	P2->SEL0 &= ~(BIT0|BIT1|BIT2);
+	P2->SEL1 &= ~(BIT0|BIT1|BIT2);
 
 
 	//Pull-down setp up DIR REN OUT : 0 1 0
-	P5->DIR &= ~(0x07);
-	P5->REN |= 0x07;
-	P5->OUT &= ~(0x07);
-	P5->SEL0 &= ~(0x07);
-	P5->SEL1 &= ~(0x07);
+	P5->DIR &= ~(BIT0|BIT1|BIT2);
+	P5->REN |= BIT0|BIT1|BIT2;
+	P5->OUT &= ~(BIT0|BIT1|BIT2);
+	P5->SEL0 &= ~(BIT0|BIT1|BIT2);
+	P5->SEL1 &= ~(BIT0|BIT1|BIT2);
 	//interrupt setup
-	P5->IE |= 0x07;
-	P5->IES &= ~(0x07);
-	P5->IFG &= ~(0x07);
+	P5->IE |= BIT0|BIT1|BIT2;
+	P5->IES &= ~(BIT0|BIT1|BIT2);
+	P5->IFG &= ~(BIT0|BIT1|BIT2);
 
 	NVIC->ISER[1] = 1 << ((PORT5_IRQn) & 31);
 
@@ -50,7 +49,7 @@ void PORT5_IRQHandler(void){
     }
     if(result & BIT2){
         lcdSetText("Led off         ",0,1);
-        P2->OUT &= ~(0x07);
+        P2->OUT &= ~(BIT0|BIT1|BIT2);
     }
     P5->IFG &= ~(result);
 }
