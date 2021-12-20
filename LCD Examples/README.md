@@ -44,11 +44,11 @@ such as changing the P4X registers to P4->X as well as renaming the library. `lc
     ~~~c
     lcdInit();
     ~~~
-- **1** ***Clear previous data***
+- **2** ***Clear previous data***
     ~~~c
     lcdClear();
     ~~~
-- **1** ***Set any text***
+- **3** ***Set any text***
     - *Integer*
     ~~~c
     lcdSetInt(432, x, y);
