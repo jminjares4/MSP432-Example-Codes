@@ -1,4 +1,4 @@
-# **Liquid Crystal Display (LCD) :zap:**
+# **Stopwatch :zap:**
 
 ## **Description**
 This program will demostrate how to use interrupts, SysTick and the LCD to create a stop watch. 
@@ -8,7 +8,7 @@ This program will demostrate how to use interrupts, SysTick and the LCD to creat
 - Texas Instrument
 
 ## **MSP432 I/O Configuration Table** 
-| PxDIR | PxREN | PxOUT | I/O Configuration|
+| **PxDIR** | **PxREN** | **PxOUT** | **I/O Configuration**|
 | :---: | :---: | :---: |     :---         |     
 | 0     | 0     |  x    |  Input           |
 | 0     | 1     |  0    |  Input with pulldown resistor  |
@@ -17,7 +17,7 @@ This program will demostrate how to use interrupts, SysTick and the LCD to creat
   * I/O Configuration
 
 ## **MSP432 Interrupt Configuration Table**
-| PxIE  | PxIES | PxIFG | I/O Configuration  |
+| **PxIE**  | **PxIES** | **PxIFG** | **I/O Configuration**  |
 | :---: | :---: | :---: |     :---           |     
 | 1     | 0     |  0    |  Pull-down         |
 | 1     | 1     |  0    |  Pull-up           |
@@ -83,7 +83,7 @@ This program will demostrate how to use interrupts, SysTick and the LCD to creat
     lcdSetText(buffer, x, y);
     ~~~
 ## **MPS432 SysTick Configuration Table**
-| Bit  | Name              | Descriptions |
+| **Bit**  | **Name**              | **Descriptions** |
 | :---: | :---:            | :--- |        
 | 0     | ENABLE           | Enable <br> 0: the counter is disabled<br> 1:enables SysTick to begin counting down|  
 | 1     | TICKINT          |  Interrupt Enable <br> 0: Interrupt generation is disabled <br>1: when SysTick counts to 0 an interrupt is generated<br>    | 
