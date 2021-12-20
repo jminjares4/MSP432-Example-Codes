@@ -62,7 +62,7 @@ This code will just turn an `P1.0` onboard LED, which is the RED onboard led of 
     ~~~
 
 
-# Intialize Ports
+# **Intialize Ports**
 The following section of code will provide a brief description of what is going on and how to set an `LED` or `OUTPUT`. The MSP432 has various port that can be use for *general purpose input and output* or `GPIOs`. Within the MSP432, `Px` is used to select the port that will be utlize, x being the port number. For instance, we will want to use `P1.0` as an output. Therefore, `1` will be our port and `BIT0` will be the bit that we will use. 
 ~~~c
 P1->DIR |= BIT0; //initialize BIT0 as output
