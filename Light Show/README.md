@@ -11,7 +11,7 @@ This program will demostrate how to use external GPIOs to create a lightshow.
 When using `LEDs`, you must use current limit resistor to avoid  buring the led. Therefore with the use of *ohm's law*, **V = I*R** we can find the resistor to be used based on the table below. Typically 220 ohm do the job, however 330 is a safe bet!
 
 ## **LEDs** 
-| Color | Voltage (V) | Current (mA) |
+| **Color** | **Voltage (V)** | **Current (mA)** |
 |:---   | :---:       |     ---:     |
 | Red   | 1.8-2.4     |      20      |
 | Yellow| 2.0-2.2     |      20      |

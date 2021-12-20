@@ -9,7 +9,7 @@ the onboard led every 5 seconds.
 - Texas Instrument
 
 ## **MPS432 SysTick Configuration Table**
-| Bit  | Name              | Descriptions |
+| **Bit**  | **Name**              | **Descriptions** |
 | :---: | :---:            | :--- |        
 | 0     | ENABLE           | Enable <br> 0: the counter is disabled<br> 1:enables SysTick to begin counting down|  
 | 1     | TICKINT          |  Interrupt Enable <br> 0: Interrupt generation is disabled <br>1: when SysTick counts to 0 an interrupt is generated<br>    | 

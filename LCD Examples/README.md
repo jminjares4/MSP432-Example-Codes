@@ -64,8 +64,6 @@ such as changing the P4X registers to P4->X as well as renaming the library. `lc
     lcdSetText(buffer, x, y);
     ~~~
 
-
-
 ## **Authors:**
   - Jesus Minjares :zap:
     - Master of Science in Computer Engineering
