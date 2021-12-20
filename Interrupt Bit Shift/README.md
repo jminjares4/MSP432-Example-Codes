@@ -1,7 +1,7 @@
-# **LED with Interrupts :zap:**
+# **Interrupt Bit Shifts :zap:**
 
 ## Description
-This program will demostrate how to use GPIO inputs to select different led colors using interrupts. This example uses `pull-down` configuration!
+This program will demostrate how to use interrupts and control a global variable. The interrupt configuration of the following program is at `pull-up`!
 
 ## Pinout
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
@@ -16,7 +16,7 @@ This program will demostrate how to use GPIO inputs to select different led colo
 | 1     | x     |  x    |  Output         |
   * I/O Configuration
 
-## MPS432 Interrupt Configuration Table
+## MPS432 Interruot Configuration Table
 | PxIE  | PxIES | PxIFG | I/O Configuration  |
 | :---: | :---: | :---: |     :---           |     
 | 1     | 0     |  0    |  Pull-down         |
