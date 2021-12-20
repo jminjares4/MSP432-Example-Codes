@@ -36,7 +36,7 @@ This program will demostrate how to use interrupts, SysTick and the LCD to creat
 | 10k Potentiometer Output (V<sub>o</sub>) | 3| Contrast|    
 | `P4.5` | 4| RS (Register Select): 0 – Command, 1 - Data|    
 | `GND`| 5| R/W (Read/Write): 0 – Write, 1 - Read|    
-| `2.4` | 6| Clock Enable|    
+| `4.4` | 6| Clock Enable|    
 | `NC`| 7| Data 0|
 | `NC`| 8| Data 1|    
 | `NC` | 9| Data 2|    
