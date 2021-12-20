@@ -11,7 +11,7 @@ Lastly, the following code will use the LCD to display RGB current color that is
 - Texas Instrument
 
 ## **MSP432 I/O Configuration Table** 
-| PxDIR | PxREN | PxOUT | I/O Configuration|
+| **PxDIR** | **PxREN** | **PxOUT** | **I/O Configuration**|
 | :---: | :---: | :---: |     :---         |     
 | 0     | 0     |  x    |  Input           |
 | 0     | 1     |  0    |  Input with pulldown resistor  |
@@ -20,7 +20,7 @@ Lastly, the following code will use the LCD to display RGB current color that is
   * I/O Configuration
 
 ## **MSP432 Interrupt Configuration Table**
-| PxIE  | PxIES | PxIFG | I/O Configuration  |
+| **PxIE**  | **PxIES** | **PxIFG** | **I/O Configuration**  |
 | :---: | :---: | :---: |     :---           |     
 | 1     | 0     |  0    |  Pull-down         |
 | 1     | 1     |  0    |  Pull-up           |
