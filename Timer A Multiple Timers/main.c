@@ -11,7 +11,7 @@ uint8_t tic3 = 0;
 void main(void)
 {
 	WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;		// stop watchdog timer
-
+	//
 	P4->DIR |= (BIT0|BIT1|BIT2|BIT3);
 	P4->OUT &= ~(BIT0|BIT1|BIT2|BIT3);
 	P4->SEL0 &= ~(BIT0|BIT1|BIT2|BIT3);
