@@ -4,6 +4,7 @@
 This program will demostrate how to use lcdLib that was developed by previous alumnis at **UTEP**!
 The library is simple custom driver to be able to us the LCD. However, I made some slight changes 
 such as changing the P4X registers to P4->X as well as renaming the library. `lcdLib_432` to `lcdLib`.
+Lastly, the following code will use the LCD to display RGB current color that is on.
 
 ## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
