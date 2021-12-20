@@ -40,15 +40,15 @@ such as changing the P4X registers to P4->X as well as renaming the library. `lc
 |lcdSetInt(integer, c, r); | Print a integer starting at c, column and r, row. |
 |delay_ms(x); | Delay for x milliseconds. |
 ## How to use LCD Driver
-- 1 **Initialize lcd**
+- **1** ***Initialize lcd***
     ~~~c
     lcdInit();
     ~~~
-- 2 **Clear previous data**
+- **1** ***Clear previous data***
     ~~~c
     lcdClear();
     ~~~
-- 3 **Set any text**
+- **1** ***Set any text***
     - *Integer*
     ~~~c
     lcdSetInt(432, x, y);
