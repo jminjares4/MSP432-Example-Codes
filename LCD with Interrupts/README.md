@@ -66,11 +66,11 @@ Lastly, the following code will use the LCD to display RGB current color that is
     ~~~c
     lcdInit();
     ~~~
-- **1** ***Clear previous data***
+- **2** ***Clear previous data***
     ~~~c
     lcdClear();
     ~~~
-- **1** ***Set any text***
+- **3** ***Set any text***
     - *Integer*
     ~~~c
     lcdSetInt(432, x, y);
