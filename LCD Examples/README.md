@@ -10,7 +10,7 @@ such as changing the P4X registers to P4->X as well as renaming the library. `lc
 - Texas Instrument
 
 ## MSP432 LCD 16x02 Pinout
-| MSP432 Pins |    LCD Pin |  Description |   
+| **MSP432 Pins** |    **LCD Pin** |  **Description** |   
 | :---:       |  :--:      |   :---:      |
 | `GND`, 10k Potentiometer Output (V&#177;) | 1| GND|  
 | `VCC`, 10k Potentiometer Output (V&#177;) | 2| VCC|    
@@ -31,9 +31,8 @@ such as changing the P4X registers to P4->X as well as renaming the library. `lc
   * LCD Pinout Configuration
   * Credits: [EE 3176 Pinout Lab 4](http://www.ece.utep.edu/courses/web3376/MSP430_Labs.html)
   
-
 ## LCD Main Functions
-|Function | Description |
+|**Function** | **Description** |
 | :---    | :---        |
 | lcdInit();    |   Initialize LCD Display            |
 | lcdClear();   | Clear the LCD Display of characters | 
@@ -41,24 +40,24 @@ such as changing the P4X registers to P4->X as well as renaming the library. `lc
 |lcdSetInt(integer, c, r); | Print a integer starting at c, column and r, row. |
 |delay_ms(x); | Delay for x milliseconds. |
 ## How to use LCD Driver
-- 1 Initialize lcd
+- 1 **Initialize lcd**
     ~~~c
     lcdInit();
     ~~~
-- 2 Clear previous data
+- 2 **Clear previous data**
     ~~~c
     lcdClear();
     ~~~
-- 3 Set any text
-    - Integer?
+- 3 **Set any text**
+    - *Integer*
     ~~~c
     lcdSetInt(432, x, y);
     ~~~
-    - String?
+    - *String*
     ~~~c
     lcdSetText("Hello World!",x ,y);
     ~~~
-    - Custom Text?
+    - *Custom Text*
     ~~~c
     char buffer[16];
     sprintf(buffer, "ECE! %.2lf, %c, %d", 3.14, 'A', 1);
