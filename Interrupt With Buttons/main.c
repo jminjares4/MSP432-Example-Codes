@@ -48,21 +48,21 @@ void main(void)
 
 	while (1)
 	{
-		P1->OUT ^= BIT0; //toggle the BIT0
-		__delay_cycles(500000); //delay to see the changes
+		P1->OUT ^= BIT0;		// toggle the BIT0
+		__delay_cycles(500000); // delay to see the changes
 	}
 }
 
 void PORT4_IRQHandler(void)
 {
-	uint8_t result = P4->IFG; //store IFG 
-	if (result & BIT0) //check if BIT0 was trigger
+	uint8_t result = P4->IFG; // store IFG
+	if (result & BIT0)		  // check if BIT0 was trigger
 	{
-		P2->OUT |= BIT2; //set BIT2 on
+		P2->OUT |= BIT2; // set BIT2 on
 	}
-	if (result & BIT1) //check if BIT1 was trigger
+	if (result & BIT1) // check if BIT1 was trigger
 	{
-		P2->OUT &= ~(BIT2); //clear BIT2
+		P2->OUT &= ~(BIT2); // clear BIT2
 	}
-	P4->IFG &= ~(result); //clear interrupts flags
+	P4->IFG &= ~(result); // clear interrupts flags
 }

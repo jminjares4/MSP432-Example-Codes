@@ -24,8 +24,8 @@ void main(void)
 	P1->SEL0 &= ~(BIT0);
 	P1->SEL1 &= ~(BIT0);
 
-	while (1)
-	{							 // infinite loop, to avoid WDT
+	while (1) // infinite loop, to avoid WDT
+	{
 		P1->OUT = BIT0;			 // set BIT0 as high!
 		__delay_cycles(1000000); // add a delay in MCU
 	}

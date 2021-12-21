@@ -37,7 +37,7 @@ void main(void)
 	SysTick->CTRL = 0x07;	// 1       1       1    ->  0x07, start timer
 	SysTick->VAL = 1 - 1;	// set 0 to the value
 	SysTick->LOAD = 300000; // 300000/3MHz - > 0.1s -> 100ms
-	
+
 	// enable global interrupts
 	__enable_irq();
 
@@ -50,10 +50,10 @@ void main(void)
 
 void SysTick_Handler(void)
 {
-	// every tic is 100ms therefore, 50 * 100ms -> 5 secs 
-	if (tic++ > 5 * 10) //check if 5 sec have passed
-	{ 
-		P1->OUT ^= BIT0; //toggle led 
-		tic = 0; //clear tic 
+	// every tic is 100ms therefore, 50 * 100ms -> 5 secs
+	if (tic++ > 5 * 10) // check if 5 sec have passed
+	{
+		P1->OUT ^= BIT0; // toggle led
+		tic = 0;		 // clear tic
 	}
 }

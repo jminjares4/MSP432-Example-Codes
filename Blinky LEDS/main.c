@@ -29,7 +29,7 @@ void main(void)
 	{
 		P1->OUT = BIT0; // set BIT0 as high!
 		__delay_cycles(500000);
-		P1->OUT &= ~(BIT0);
+		P1->OUT &= ~(BIT0);		// set BIT0 to low!
 		__delay_cycles(500000); // set BIT0 as low!
 	}
 }

@@ -12,9 +12,9 @@
 #include "msp.h"
 
 // MACROs for all onboard leds
-#define RED   0x01   // BIT0
+#define RED 0x01   // BIT0
 #define GREEN 0x02 // BIT1
-#define BLUE  0x04  // BIT2
+#define BLUE 0x04  // BIT2
 void main(void)
 {
 	WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD; // stop watchdog timer
@@ -36,18 +36,18 @@ void main(void)
 	P4->IES &= ~(0x0F); // Bit clear for pull-down
 	P4->IFG &= ~(0x0F); // Enable flag for interrupts
 
-	//enable NVIC for port 4
-	NVIC->ISER[1] = 1 << ((PORT4_IRQn)&31); //see NVIC table, all PORTx go in ISER[1]
+	// enable NVIC for port 4
+	NVIC->ISER[1] = 1 << ((PORT4_IRQn)&31); // see NVIC table, all PORTx go in ISER[1]
 
 	__enable_irq(); // enable global interrupts
-	while (1)//empty loop
+	while (1)		// empty loop
 	{
 	}
 }
 
 void PORT4_IRQHandler(void)
 {
-	uint8_t result = P4->IFG; //store P4->IFG
+	uint8_t result = P4->IFG; // store P4->IFG
 	if (result & BIT0)
 	{						// check bit 0
 		P2->OUT &= ~(0x0F); // clear all bits

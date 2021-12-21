@@ -1,7 +1,7 @@
 # **Timer_A :zap:**
 
 ## **Description**
-This program will demostrate how to use Timer_A to create periodic tasks. The Timer_A toggle an led at different rates.
+This program will demostrate how to use Timer_A to create periodic tasks with multiple timers.
 
 ## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
