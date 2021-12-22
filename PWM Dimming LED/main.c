@@ -32,8 +32,8 @@ void main(void)
 	{
 		__delay_cycles(1000000);	 // small delay
 		TIMER_A0->CCR[1] += 300 - 1; // increase pwm output by 5%
-		if (TIMER_A0->CCR[1] > 6000)
-		{						  // check if we exceed our threshold
+		if (TIMER_A0->CCR[1] > 6000) // check if we exceed our threshold
+		{						  
 			TIMER_A0->CCR[1] = 0; // reset register
 		}
 	}
