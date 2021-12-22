@@ -25,3 +25,4 @@ void main(void)
 	       TIMER_A0->CCR[3] = sineWave[i]-1;
 	   }
 	}
+}
