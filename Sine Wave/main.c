@@ -37,4 +37,8 @@ void main(void)
 			TIMER_A0->CCR[3] = sineWave[i] - 1; //using for-loop to switch the duty-cycle for PWM Output
 		}
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7bfcf041f44c0a9584aa8674b50d99d25df7cb36
