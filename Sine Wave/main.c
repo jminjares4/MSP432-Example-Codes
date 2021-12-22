@@ -1,11 +1,8 @@
 #include "msp.h"
 
 
-/**
- * main.c
-*/
-uint8_t i;
 uint16_t sineWave[] = {1,12000,24000,36000,48000,60000,48000,36000,24000,12000,1};
+
 void main(void)
 {
 	WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;		// stop watchdog timer
@@ -21,8 +18,9 @@ void main(void)
 	TIMER_A0->CCR[3] = 1-1;
 	TIMER_A0->CCTL[3] = TIMER_A_CCTLN_OUTMOD_7;
 
+	uint8_t i;
 	while(1){
-	   for(i = 0; i < 11; i++)
+	   for(i = 0; i < sizeof(sineWave)/sizeof(uint16_t); i++){
 	       __delay_cycles(100000);
 	       TIMER_A0->CCR[3] = sineWave[i]-1;
 	   }
