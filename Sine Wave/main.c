@@ -2,7 +2,7 @@
  * @file main.c
  * @author Jesus Minjares (https://github.com/jminjares4)
  * @author Jorge Minjares (https://github.com/JorgeMinjares)
- * @brief This program will demonstrate how to set-up Port 2 as a PWM output to move a Servo Motor
+ * @brief This program will demonstrate a Sine Wave using LEDs and PWM
  * @version 0.1
  * @date 2021-12-22
  *
