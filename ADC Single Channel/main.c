@@ -19,15 +19,15 @@ void main(void)
 	P5->SEL0 |= BIT0;
 	P5->SEL1 |= BIT0;
 
-
-	P2->DIR |= BIT2;
-	P2->OUT &= ~(BIT2);
-	P2->SEL0 &= ~(BIT2);
-	P2->SEL1 &= ~(BIT2);
-
-	ADC14->CTL0 |=  ADC14_CTL0_SHP | ADC14_CTL0_CONSEQ_0 | ADC14_CTL0_ON;
-	ADC14->MCTL[0] = ADC14_MCTLN_INCH_5; // A5
-	ADC14->CTL1 |= ADC14_CTL1_RES__14BIT; // 14 bits resolution
+	//Enable on-board LED
+	P2->DIR |= BIT2;//Bit Set P2.2
+	P2->OUT &= ~(BIT2);//Bit Clear P2.2
+	P2->SEL0 &= ~(BIT2);//Bit Clear SEL0 for P2.2
+	P2->SEL1 &= ~(BIT2);//Bit Clear SEL1 for P2.2
+	//Set-Up for ADC
+	ADC14->CTL0 |=  ADC14_CTL0_SHP | ADC14_CTL0_CONSEQ_0 | ADC14_CTL0_ON;//
+	ADC14->MCTL[0] = ADC14_MCTLN_INCH_5; //set ADC channel as A5 = P5.0
+	ADC14->CTL1 |= ADC14_CTL1_RES__14BIT; // set resolution as a 14 bits resolution
 	ADC14->IER0 |= ADC14_IER0_IE0; //interrupt for mem 0
 
 	NVIC->ISER[0] |= 1 << ((ADC14_IRQn) & 31); //enable nvic
