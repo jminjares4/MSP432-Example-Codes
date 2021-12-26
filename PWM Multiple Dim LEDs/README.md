@@ -1,10 +1,9 @@
 # **Pulse Width Modulation (PWM) LED Dimmer :zap:**
 
 ## **Description**
-This program will demostrate how to use Timer_A to create pulse width modulation (PWM) signals. The following program will increase and reset the duty cycle of the PWM or essentially brightness of the LED. 
+This program will demostrate how to use Timer_A to create pulse width modulation (PWM) signals. TimerA has a total of 4 timers: TimerA0, TimerA1, TimerA2, TimerA3. With the use of capture compare mode, PWM signal can be generated. The following program will demostrate how to use all of the TimerA0 PWM pins to change the brightness of a LED.
 
 ## **Pinout**
-![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
 - Texas Instrument
 
 ## **MSP432 Timer_A Configuration Table 1**
@@ -48,3 +47,4 @@ TIMER_A0->CCTL[1] = TIMER_A_CCTLN_OUTMOD_7; //enable for PWM
     - Master of Science in Computer Engineering
   - Jorge Minjares :zap:
     - Bachelor of Science in Electrical Engineering
+
