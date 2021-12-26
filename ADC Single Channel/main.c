@@ -30,9 +30,11 @@ void main(void)
 	ADC14->CTL1 |= ADC14_CTL1_RES__14BIT;								 // set resolution as a 14 bits resolution
 	ADC14->IER0 |= ADC14_IER0_IE0;										 // interrupt for mem 0
 
+	// enable NVIC for ADC14
 	NVIC->ISER[0] |= 1 << ((ADC14_IRQn)&31); // enable nvic
 
-	__enable_irq(); // enable global interrupts
+	// enable global interrupts
+	__enable_irq();
 
 	while (1)
 	{
@@ -44,12 +46,12 @@ void ADC14_IRQHandler(void)
 {
 	uint16_t adcRaw = ADC14->MEM[0]; // read adc data
 
-	if (adcRaw > threshold) // Vcc/2 -> 1.15V
+	if (adcRaw > threshold) // Vcc/2 -> 3.04/2
 	{
-		P2->OUT = BIT2;
+		P2->OUT = BIT2; // turn on BLUE led
 	}
 	else
 	{
-		P2->OUT &= ~(BIT2);
+		P2->OUT &= ~(BIT2); // turn off LED
 	}
 }
