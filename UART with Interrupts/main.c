@@ -12,82 +12,120 @@
 
 #include "msp.h"
 
+/**
+ * @brief Send a string via UART0
+ *
+ * @param str String that will be sent through serial interface
+ */
 void sendString(char *str);
+/**
+ * @brief Send a character via UART0
+ *
+ * @param s character that will be sent through serial interface
+ */
 void sendChar(char s);
 void main(void)
 {
-	WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;		// stop watchdog timer
+    WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD; // stop watchdog timer
 
-	P1->SEL0 |= BIT2|BIT3;
-	P1->SEL1 &= ~(BIT2|BIT3);
- //Enhanced Universal Serial Control Interface = EUSCI
-	EUSCI_A0->CTLW0 = EUSCI_A_CTLW0_SWRST; //Clear previous configuration of UART
-	EUSCI_A0->CTLW0 |= EUSCI_A_CTLW0_SSEL__SMCLK;
-	EUSCI_A0->BRW = 19; //Baudrate width, SMClock/16/DR -> 3000000/16/9600 = 19.53125
-	EUSCI_A0->MCTLW = (9 << EUSCI_A_MCTLW_BRF_OFS | EUSCI_A_MCTLW_OS16);
-	EUSCI_A0->CTLW0 &= ~(EUSCI_A_CTLW0_SWRST);
-	//enable UART interrupt
-	EUSCI_A0->IE |= EUSCI_A_IE_RXIE; // enable receiver interrupt
-	EUSCI_A0->IFG &= ~(EUSCI_A_IE_RXIE); //clear interrupt flag
-	NVIC->ISER[0] = 1 << (EUSCIA0_IRQn & 31);
+    // Error LED
+    P1->DIR |= BIT0;    // set BIT0 as OUTPUT
+    P1->OUT &= ~(BIT0); // set BIT0 as LOW
+    // clear secondary functions
+    P1->SEL0 &= ~(BIT0);
+    P1->SEL1 &= ~(BIT0);
 
-	sendString("Enter r for red, g for green, b for blue!\r\n");
+    // RGB LEDs
+    P2->DIR |= BIT0 | BIT1 | BIT2;    // set BIT0,1,2 as OUTPUTs
+    P2->OUT &= ~(BIT0 | BIT1 | BIT2); // set BIT0,1,2 as LOW
+    // clear secondary functions
+    P2->SEL0 &= ~(BIT0 | BIT1 | BIT2);
+    P2->SEL1 &= ~(BIT0 | BIT1 | BIT2);
 
-	P1->DIR |= BIT0;
-	P1->OUT &= ~(BIT0);
-	P1->SEL0 &= ~(BIT0);
-	P1->SEL1 &= ~(BIT0);
+    // Enable UART0 Pins
+    // P1.2->RX
+    // P1.3->TX
+    P1->SEL0 |= BIT2 | BIT3;
+    P1->SEL1 &= ~(BIT2 | BIT3);
 
-	P2->DIR |= BIT0|BIT1|BIT2;
-	P2->OUT &= ~(BIT0|BIT1|BIT2);
-	P2->SEL0 &= ~(BIT0|BIT1|BIT2);
-	P2->SEL1 &= ~(BIT0|BIT1|BIT2);
+    // UART0 Configuration
+    // Enhanced Universal Serial Control Interface = EUSCI
+    EUSCI_A0->CTLW0 = EUSCI_A_CTLW0_SWRST;                               // Clear previous configuration of UART
+    EUSCI_A0->CTLW0 |= EUSCI_A_CTLW0_SSEL__SMCLK;                        // Select SMClock, no parity, 1 stop bit, 8 bits, LSB
+    EUSCI_A0->BRW = 19;                                                  // Baudrate width, SMClock/16/DR -> 3000000/16/9600 = 19.53125
+    EUSCI_A0->MCTLW = (9 << EUSCI_A_MCTLW_BRF_OFS | EUSCI_A_MCTLW_OS16); // // 19.53125 - 19 = 0.53125 * 16 = 8.5, round up to 9
+    EUSCI_A0->CTLW0 &= ~(EUSCI_A_CTLW0_SWRST);                           // clear reset bit
+    // enable UART interrupt
+    EUSCI_A0->IE |= EUSCI_A_IE_RXIE;     // enable receiver interrupt
+    EUSCI_A0->IFG &= ~(EUSCI_A_IE_RXIE); // clear interrupt flag
 
-	__enable_irq(); //enable global interrupts
-	while(1){
+    // enable NVIC for UART0
+    NVIC->ISER[0] = 1 << (EUSCIA0_IRQn & 31);
 
-	}
+    // enable global interrupts
+    __enable_irq();
+
+    sendString("Enter r for red, g for green, b for blue!\r\n"); // send message
+
+    while (1)
+    {
+    }
 }
 
-
-void EUSCIA0_IRQHandler(void){
-
-    if(EUSCI_A0->IFG & EUSCI_A_IFG_RXIFG){ //recieve interrupt
-        char c = EUSCI_A0->RXBUF; //store data into character buffer, and clear flag
-        sendChar(c);
-        sendString("\r\n");
-        if(c == 'b'){
-            //turn blue led
-            P2->OUT = BIT2;
-        }else if(c == 'g'){
-            //turn green led
-            P2->OUT = BIT1;
-        }else if(c == 'r'){
-            //turn red led
-            P2->OUT = BIT0;
+void EUSCIA0_IRQHandler(void)
+{
+    if (EUSCI_A0->IFG & EUSCI_A_IFG_RXIFG) // recieve interrupt
+    {                             
+        char c = EUSCI_A0->RXBUF; // store data into character buffer, and clear flag
+        sendChar(c);              // display character through the SERIAL port
+        sendString("\r\n");       // send carriage return and new line
+        // check the recieved character
+        if (c == 'b')
+        {
+            P2->OUT = BIT2; // turn blue led
         }
-        else{
-            int i = 0;
-            for( ; i < 6; i++){
-                P1->OUT ^= BIT0;
-                __delay_cycles(1000000);
+        else if (c == 'g')
+        {
+            P2->OUT = BIT1; // turn green led
+        }
+        else if (c == 'r')
+        {
+            P2->OUT = BIT0; // turn red led
+        }
+        else
+        {
+            int i = 0; // create iterator variable
+            for (; i < 4; i++)
+            {                            // toggle twice
+                P1->OUT ^= BIT0;         // toggle the led
+                __delay_cycles(1000000); // small delay
             }
-            P1->OUT &= ~(BIT0);
-            //toggle error
+            P1->OUT &= ~(BIT0); // clear the led
         }
     }
-
 }
 
-void sendString(char *str){
-    int i;
-    for(i = 0; str[i] != '\0'; i++){
-        while(!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG)); //wait until is ready to transmit
-        EUSCI_A0->TXBUF = str[i];
+/**
+ * @brief Send a string via UART0
+ *
+ * @param str String that will be sent through serial interface
+ */
+void sendString(char *str)
+{
+    int i;                           // create variable
+    for (i = 0; str[i] != '\0'; i++) // iterate over the end of the string
+    {
+        while (!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG)); // wait until is ready to transmit
+        EUSCI_A0->TXBUF = str[i]; // send character through buffer
     }
 }
-
-void sendChar(char s){
-    while(!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG)); //wait until is ready to transmit
-    EUSCI_A0->TXBUF = s;
+/**
+ * @brief Send a character via UART0
+ *
+ * @param s Character that will be sent through serial interface
+ */
+void sendChar(char s)
+{
+    while (!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG)); // wait until is ready to transmit
+    EUSCI_A0->TXBUF = s; // send character through buffer
 }
