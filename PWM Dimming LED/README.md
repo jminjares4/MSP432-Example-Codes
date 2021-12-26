@@ -32,7 +32,7 @@ This program will demostrate how to use Timer_A to create pulse width modulation
 | 2 | OUT | Output. For output mode 0, this bit directly controls the state of the output. <br> 0: Output low <br> 1: Output high|
 | 1 | COV | Capture overflow. THis bit indicates a capture overflow occured. COV mst be reset with software. <br> 0: No capture overflow occured <br> 1: Capture overflow occured|
 | 0 | CCIFG | Capture/compare interrupt flag <br> 0: No interrupt pending <br> 1: Interrupt pending |
-    * TIMER_Ax->CCTL
+  * TIMER_Ax->CCTL
 
 Example of how to set the Timer_A0 to set the period and duty cycle of TA0.1.
 ~~~c
