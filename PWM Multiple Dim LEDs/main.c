@@ -29,12 +29,12 @@ void main(void)
 	TIMER_A0->CCR[2] = 45000 - 1;							 // set @ 45k or 75% duty cycle
 	TIMER_A0->CCR[3] = 30000 - 1;							 // set @ 30k or 50% duty cylce
 	TIMER_A0->CCR[4] = 15000 - 1;							 // set @ 15k or 25% duty cycle
+	
 	// enable PWM
 	TIMER_A0->CCTL[1] = TIMER_A_CCTLN_OUTMOD_7;
 	TIMER_A0->CCTL[2] = TIMER_A_CCTLN_OUTMOD_7;
 	TIMER_A0->CCTL[3] = TIMER_A_CCTLN_OUTMOD_7;
 	TIMER_A0->CCTL[4] = TIMER_A_CCTLN_OUTMOD_7;
 
-	while (1)
-		; // infinite loop
+	while(1); // infinite loop
 }
