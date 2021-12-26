@@ -23,10 +23,10 @@ The SG90 Servo Motor operates at 50 Hertz (Hz) or 20 milliseconds (ms). It range
 |   5            |  1          | -90            |  
 |   7.5          |  1.5        | 0              |
 |   10           |  2          |  90            |
-  * SG90 Duty cycle 
- ### 
+  * SG90 Duty cycle
+### **SG90 PWM Period**
+![image](https://user-images.githubusercontent.com/60948298/147421173-c8a12dfc-fa88-439e-810f-27274cd56e0d.png)
 
-* SG90 PWM Signal
 
 ## **MSP432 Timer_A Configuration Table 1**
 | **Bit**  | **Name**              | **Descriptions** |
