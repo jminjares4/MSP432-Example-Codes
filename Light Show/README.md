@@ -34,8 +34,9 @@ uint8_t y = 0x01 << 1; //shift 0x01 by 1 -> 0x02
 uint8_t x = 0x10 >> 0; //shift 0x10 by 0 -> 0x10
 uint8_t y = 0x10 >> 1; //shift 0x10 by 1 -> 0x40
 ~~~
+
 ## **Authors:**
-  - Jesus Minjares :zap:
+  - [Jesus Minjares](https://github.com/jminjares4) :zap:
     - Master of Science in Computer Engineering
-  - Jorge Minjares :zap:
-    - Bachelor of Science in Electrical Engineering
+  - [Jorge Minjares](https://github.com/JorgeMinjares) :zap:
+    - Bachelor of Science in Electrical Engineering  - Bachelor of Science in Electrical Engineering

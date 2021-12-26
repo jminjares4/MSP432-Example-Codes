@@ -87,7 +87,7 @@ Lastly, the following code will use the LCD to display RGB current color that is
     ~~~
 
 ## **Authors:**
-  - Jesus Minjares :zap:
+  - [Jesus Minjares](https://github.com/jminjares4) :zap:
     - Master of Science in Computer Engineering
-  - Jorge Minjares :zap:
+  - [Jorge Minjares](https://github.com/JorgeMinjares) :zap:
     - Bachelor of Science in Electrical Engineering

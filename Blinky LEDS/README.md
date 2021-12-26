@@ -8,7 +8,7 @@ This code toggles the `on-board LEDs` to blink at a rate of 500000 cycles.
   - Texas Instrument
 
 ## **Authors:**
-  - Jesus Minjares :zap:
+  - [Jesus Minjares](https://github.com/jminjares4) :zap:
     - Master of Science in Computer Engineering
-  - Jorge Minjares :zap:
+  - [Jorge Minjares](https://github.com/JorgeMinjares) :zap:
     - Bachelor of Science in Electrical Engineering

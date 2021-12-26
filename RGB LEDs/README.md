@@ -9,7 +9,7 @@ will be store in MACROs and then create an global array to iterate over to displ
   - Texas Instrument
   
 ## **Authors:**
-  - Jesus Minjares :zap:
+  - [Jesus Minjares](https://github.com/jminjares4) :zap:
     - Master of Science in Computer Engineering
-  - Jorge Minjares :zap:
+  - [Jorge Minjares](https://github.com/JorgeMinjares) :zap:
     - Bachelor of Science in Electrical Engineering

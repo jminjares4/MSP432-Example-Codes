@@ -65,7 +65,7 @@ TIMER_A0->CCTL[0] = TIMER_A_CCTLN_CCIE; //enable interrupt
 ~~~
 
 ## **Authors:**
-  - Jesus Minjares :zap:
+  - [Jesus Minjares](https://github.com/jminjares4) :zap:
     - Master of Science in Computer Engineering
-  - Jorge Minjares :zap:
+  - [Jorge Minjares](https://github.com/JorgeMinjares) :zap:
     - Bachelor of Science in Electrical Engineering

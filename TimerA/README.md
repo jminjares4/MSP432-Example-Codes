@@ -32,9 +32,10 @@ This program will demostrate how to use Timer_A to create periodic tasks. The Ti
 | 2 | OUT | Output. For output mode 0, this bit directly controls the state of the output. <br> 0: Output low <br> 1: Output high|
 | 1 | COV | Capture overflow. THis bit indicates a capture overflow occured. COV mst be reset with software. <br> 0: No capture overflow occured <br> 1: Capture overflow occured|
 | 0 | CCIFG | Capture/compare interrupt flag <br> 0: No interrupt pending <br> 1: Interrupt pending |
-    * TIMER_Ax->CCTL
+  * TIMER_Ax->CCTL
 
 Example of how to set the Timer_A timer. The following code will set the interrupt to run .02 second or 20ms.
+
 ~~~c
 TIMER_A0->CTL |= TIMER_A_CTL_TASSEL_2| TIMER_A_CTL_MC_1; // SMLCK and UP-MODE
 TIMER_A0->CCR[0] = 60000 - 1; //CCR max is 65k,  3Mhz/ 60k -> 50, 50 cycles for 1 second
@@ -42,7 +43,7 @@ TIMER_A0->CCTL[0] = TIMER_A_CCTLN_CCIE; //enable interrupt
 ~~~
 
 ## **Authors:**
-  - Jesus Minjares :zap:
+  - [Jesus Minjares](https://github.com/jminjares4) :zap:
     - Master of Science in Computer Engineering
-  - Jorge Minjares :zap:
+  - [Jorge Minjares](https://github.com/JorgeMinjares) :zap:
     - Bachelor of Science in Electrical Engineering

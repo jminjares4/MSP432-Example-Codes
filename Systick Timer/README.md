@@ -24,7 +24,7 @@ SysTick->LOAD  = 3000000 - 1; // 1 sec period, N - 1, load is 24 bit register->m
 ~~~
 
 ## **Authors:**
-  - Jesus Minjares :zap:
+  - [Jesus Minjares](https://github.com/jminjares4) :zap:
     - Master of Science in Computer Engineering
-  - Jorge Minjares :zap:
+  - [Jorge Minjares](https://github.com/JorgeMinjares) :zap:
     - Bachelor of Science in Electrical Engineering
