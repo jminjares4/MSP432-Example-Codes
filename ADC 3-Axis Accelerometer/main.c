@@ -1,3 +1,14 @@
+/**
+ * @file main.c
+ * @author Jesus Minjares (https://github.com/jminjares4)
+ * @author Jorge Minjares (https://github.com/JorgeMinjares)
+ * @brief This is a simple input code to demostrate how to create pull-up or pull-down buttons.
+ * @version 0.1
+ * @date 2021-12-26
+ *
+ * @copyright Copyright (c) 2021
+ *
+ */
 #include "msp.h"
 #include "lcdLib.h"
 #include <stdlib.h>
