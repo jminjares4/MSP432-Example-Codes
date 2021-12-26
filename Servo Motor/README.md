@@ -6,7 +6,6 @@ This program will demostrate how to use Timer_A to create pulse width modulation
 ## **Pinout**
 - Texas Instrument
 
-
 ## **SG90 Servo Motor Pinout**
 | **Wire Number** | **Wire Color** | **Description**|
 | :--- | :--- | :---: |
@@ -24,9 +23,9 @@ The SG90 Servo Motor operates at 50 Hertz (Hz) or 20 milliseconds (ms). It range
 |   7.5          |  1.5        | 0              |
 |   10           |  2          |  90            |
   * SG90 Duty cycle
+
 ### **SG90 PWM Period**
 ![image](https://user-images.githubusercontent.com/60948298/147421173-c8a12dfc-fa88-439e-810f-27274cd56e0d.png)
-
 
 ## **MSP432 Timer_A Configuration Table 1**
 | **Bit**  | **Name**              | **Descriptions** |
