@@ -2,16 +2,16 @@
 #include "lcdLib.h"
 #include <stdlib.h>
 
-#define DATA_SIZE 5
+#define DATA_SIZE 5 // Create MACRO for array
 uint8_t index = 0;
-uint16_t data[DATA_SIZE];
+uint16_t data[DATA_SIZE]; // Create array for data gathered from ADC
 
 typedef struct
 {
-    uint32_t x_axis[DATA_SIZE];
-    uint32_t y_axis[DATA_SIZE];
-    uint32_t z_axis[DATA_SIZE];
-} ADXL335_t;
+    uint32_t x_axis[DATA_SIZE]; // array for data gather from ADC corresponding for x-axis
+    uint32_t y_axis[DATA_SIZE]; // array for data gather from ADC corresponding for x-axis
+    uint32_t z_axis[DATA_SIZE]; // array for data gather from ADC corresponding for x-axis
+} ADXL335_t;                    // Structure for accelometer's axies
 
 ADXL335_t sensor;
 
@@ -22,10 +22,10 @@ void main(void)
     P5->SEL0 |= (BIT0 | BIT1 | BIT2);
     P5->SEL1 |= (BIT0 | BIT1 | BIT2);
     // x = bit 0, y = bit 1, z = bit 2
-    lcdInit();
-    lcdClear();
+    lcdInit();  // Initiate LCD screen
+    lcdClear(); // Clear previous LCD Configuration
 
-    lcdSetText("ADC 3-Axis CH", 0, 0);
+    lcdSetText("ADC 3-Axis CH", 0, 0); // Set text for LCD
 
     // SHP = using signal from sampling timer,
     // CONSEQ = enable conversion of sequence channels
@@ -37,8 +37,8 @@ void main(void)
     ADC14->CTL1 |= ADC14_CTL1_RES__14BIT;                   // Select bit resolution
     ADC14->IER0 |= ADC14_IER0_IE2;                          // Enable interrupt for mem 0
 
-    NVIC->ISER[0] = 1 << ((ADC14_IRQn)&31);
-    __enable_irq();
+    NVIC->ISER[0] = 1 << ((ADC14_IRQn)&31); // enable NVIC for ADC
+    __enable_irq();                         // enable global interrupts
     while (1)
     {
         __delay_cycles(500000);
