@@ -1,9 +1,16 @@
+/**
+ * @file main.c
+ * @author Jesus Minjares (https://github.com/jminjares4)
+ * @author Jorge Minjares (https://github.com/JorgeMinjares)
+ * @brief  Read two channels with Analog Digital Converter (ADC) Interrupt
+ * @version 0.1
+ * @date 2021-12-26
+ *
+ * @copyright Copyright (c) 2021
+ *
+ */
 #include "msp.h"
 #include "lcdLib.h"
-
-/**
- * main.c
- */
 void main(void)
 {
 	WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD; // stop watchdog timer
@@ -11,9 +18,11 @@ void main(void)
 	P5->SEL0 |= (BIT0 | BIT1);
 	P5->SEL1 |= (BIT0 | BIT1);
 
+	// Intialize LCD and clear previous data
 	lcdInit();
 	lcdClear();
 
+	// Display message
 	lcdSetText("ADC Multiple CH", 0, 0);
 
 	// SHP = using signal from sampling timer,
@@ -25,20 +34,22 @@ void main(void)
 	ADC14->CTL1 |= ADC14_CTL1_RES__14BIT;					// Select bit resolution
 	ADC14->IER0 |= ADC14_IER0_IE1;							// Enable interrupt for mem 0
 
+	// enable NVIC for ADC14
 	NVIC->ISER[0] = 1 << ((ADC14_IRQn)&31);
+	// enabloe global interrupts
 	__enable_irq();
 	while (1)
 	{
-		__delay_cycles(1500000);
+		__delay_cycles(1500000);					   // set a small delay
 		ADC14->CTL0 |= ADC14_CTL0_ENC | ADC14_CTL0_SC; // Enable ADC conversion and Start Conversion
 	}
 }
 
 void ADC14_IRQHandler(void)
 {
-	if (ADC14->IFGR0 & ADC14_IFGR0_IFG1)
+	if (ADC14->IFGR0 & ADC14_IFGR0_IFG1) // check for MEM1
 	{
-		// capture data
+		// capture data and store data
 		uint16_t ch0 = ADC14->MEM[0];
 		uint16_t ch1 = ADC14->MEM[1];
 
