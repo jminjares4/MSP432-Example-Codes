@@ -1,7 +1,7 @@
 # **Timer_A :zap:**
 
 ## **Description**
-This program will read multiple channels of ADC to determine the position of an Accelerometer. In addition the program will contain structures related to the Accelerometer(The x, y, and z-axis). Once the ADC gathers the readings, they will be displayed onto an Liquid Crystal Display (LCD).
+The following program demonstrates a ADC set for a single channel ADC. The ADC will use a 14-bit resolution, and will use P5.0 as the channel that it is reading from. Using the ADC memory, the program will toggle an on-board LED if the ADC reading is equal to or less than 1.14V.
 
 ## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
