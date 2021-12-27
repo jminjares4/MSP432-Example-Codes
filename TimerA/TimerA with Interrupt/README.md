@@ -1,11 +1,34 @@
-# **Timer_A :zap:**
+# **Timer_A with Interrupt :zap:**
 
 ## **Description**
-This program will demostrate how to use Timer_A to create periodic tasks with multiple timers.
+This program will demostrate how to use Timer_A to create periodic tasks and use interrupts to change the state of the timer.
 
 ## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
 - Texas Instrument
+
+
+## **MSP432 I/O Configuration Table** 
+| **PxDIR** | **PxREN** | **PxOUT** | **I/O Configuration**|
+| :---: | :---: | :---: |     :---         |     
+| 0     | 0     |  x    |  Input           |
+| 0     | 1     |  0    |  Input with pulldown resistor  |
+| 0     | 1     |  1    |  Input with pullup resistor |
+| 1     | x     |  x    |  Output         |
+  * I/O Configuration
+
+## **MSP432 Interrupt Configuration Table**
+| **PxIE**  | **PxIES** | **PxIFG** | **I/O Configuration**  |
+| :---: | :---: | :---: |     :---           |     
+| 1     | 0     |  0    |  Pull-down         |
+| 1     | 1     |  0    |  Pull-up           |
+| x     | x     |  1    | Interrupt occured! |
+  * Interrupt Configuration
+
+## **Pull-up and Pull-down Configuration**
+
+<img width="413" alt="button configuation" src="https://user-images.githubusercontent.com/60948298/144836131-96f04e0f-c7f7-443f-b35c-814fb9db4e29.png">
+
 
 ## **MSP432 Timer_A Configuration Table 1**
 | **Bit**  | **Name**              | **Descriptions** |
