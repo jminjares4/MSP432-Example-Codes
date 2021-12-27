@@ -21,6 +21,9 @@ This repository will contain various examples of TI MSP432 Microcontroller. The 
 [Learning Embedded Systems with MSP432 microcontrollers: MSP432P401R with Code Composer Studio](https://www.amazon.com/Learning-Embedded-Systems-MSP432-microcontrollers/dp/B08FV1XTVJ)
 * Volume 1 and 2 are good as they go straight examples for quick development
 
+## **License**
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## **Authors:**
   - [Jesus Minjares](https://github.com/jminjares4) :zap:
     - Master of Science in Computer Engineering
