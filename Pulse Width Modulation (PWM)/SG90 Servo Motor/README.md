@@ -1,4 +1,4 @@
-# **Pulse Width Modulation (PWM) LED Dimmer :zap:**
+# **SG90 Servo Motor :zap:**
 
 ## **Description**
 This program will demostrate how to use Timer_A to create pulse width modulation (PWM) signals. The following program will increase and reset the duty cycle of the PWM or essentially brightness of the LED. 
@@ -6,6 +6,27 @@ This program will demostrate how to use Timer_A to create pulse width modulation
 ## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
 - Texas Instrument
+
+## **SG90 Servo Motor Pinout**
+| **Wire Number** | **Wire Color** | **Description**|
+| :--- | :--- | :---: |
+| 1    | Brown | Ground wire connected to `GND`|
+| 2    | RED | Powers the motor typically `+5V` or `VCC` |
+| 3    | Orange | `PWM signal` is given through this wire to drive the motor |
+  * SG90 Motor Connection Table
+
+## **SG90 Servo Motor PWM**
+The SG90 Servo Motor operates at 50 Hertz (Hz) or 20 milliseconds (ms). It ranges from -90&#176; to 90&#176;.
+### **SG90 Duty Cycle**
+| **Duty Cycle (%)** | **Second (ms)**| **Angle (&#176;)** | 
+| :---           |  :---:      | :---:          |
+|   5            |  1          | -90            |  
+|   7.5          |  1.5        | 0              |
+|   10           |  2          |  90            |
+  * SG90 Duty cycle
+
+### **SG90 PWM Period**
+![image](https://user-images.githubusercontent.com/60948298/147421173-c8a12dfc-fa88-439e-810f-27274cd56e0d.png)
 
 ## **MSP432 Timer_A Configuration Table 1**
 | **Bit**  | **Name**              | **Descriptions** |
