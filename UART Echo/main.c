@@ -24,12 +24,12 @@ void main(void)
 	EUSCI_A0->CTLW0 = EUSCI_A_CTLW0_SWRST;								 // Clear previous configuration of UART by setting reset
 	EUSCI_A0->CTLW0 |= EUSCI_A_CTLW0_SSEL__SMCLK;						 // Select SMClock, no parity, 1 stop bit, 8 bits, LSB
 	EUSCI_A0->BRW = 19;													 // Baudrate width, SMClo/16/DR -> 3000000/16/9600 = 19.53125
-	EUSCI_A0->MCTLW = (9 << EUSCI_A_MCTLW_BRF_OFS | EUSCI_A_MCTLW_OS16); // 19.53125 - 19 = 0.53125 * 16 = 8.5, round up to 0
+	EUSCI_A0->MCTLW = (9 << EUSCI_A_MCTLW_BRF_OFS | EUSCI_A_MCTLW_OS16); // 19.53125 - 19 = 0.53125 * 16 = 8.5, round up to 9
 	EUSCI_A0->CTLW0 &= ~(EUSCI_A_CTLW0_SWRST);							 // clear reset bit
 
 	while (1)
 	{
-		sendString("Jorge->You Rock!!!\r\n");
+		sendString("MSP432 ROCKS!!!\r\n");
 		__delay_cycles(1000000);
 	}
 }
