@@ -1,4 +1,4 @@
-# **SysTick Timer with Interrupts :zap:**
+# **SysTick Timer with Interrupt :zap:**
 
 ## **Description**
 This program will demostrate how to use SysTick to create periodic tasks. The SysTick will be controlled by interrupts as they will disable or enable the timer.
