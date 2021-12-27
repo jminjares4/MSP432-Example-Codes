@@ -2,7 +2,7 @@
  * @file main.c
  * @author Jesus Minjares (https://github.com/jminjares4)
  * @author Jorge Minjares (https://github.com/JorgeMinjares)
- * @brief This is a simple input code to demostrate how to create pull-up or pull-down buttons.
+ * @brief Simple example of how to transmit characters or strings through UART
  * @version 0.1
  * @date 2021-12-26
  *
