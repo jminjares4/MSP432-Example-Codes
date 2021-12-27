@@ -1,34 +1,11 @@
-# **Timer_A with Interrupts :zap:**
+# **Simple Timer_A :zap:**
 
 ## **Description**
-This program will demostrate how to use Timer_A to create periodic tasks and use interrupts to change the state of the timer.
+This program will demostrate how to use Timer_A to create periodic tasks. The Timer_A toggle an led at different rates.
 
 ## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
 - Texas Instrument
-
-
-## **MSP432 I/O Configuration Table** 
-| **PxDIR** | **PxREN** | **PxOUT** | **I/O Configuration**|
-| :---: | :---: | :---: |     :---         |     
-| 0     | 0     |  x    |  Input           |
-| 0     | 1     |  0    |  Input with pulldown resistor  |
-| 0     | 1     |  1    |  Input with pullup resistor |
-| 1     | x     |  x    |  Output         |
-  * I/O Configuration
-
-## **MSP432 Interrupt Configuration Table**
-| **PxIE**  | **PxIES** | **PxIFG** | **I/O Configuration**  |
-| :---: | :---: | :---: |     :---           |     
-| 1     | 0     |  0    |  Pull-down         |
-| 1     | 1     |  0    |  Pull-up           |
-| x     | x     |  1    | Interrupt occured! |
-  * Interrupt Configuration
-
-## **Pull-up and Pull-down Configuration**
-
-<img width="413" alt="button configuation" src="https://user-images.githubusercontent.com/60948298/144836131-96f04e0f-c7f7-443f-b35c-814fb9db4e29.png">
-
 
 ## **MSP432 Timer_A Configuration Table 1**
 | **Bit**  | **Name**              | **Descriptions** |
@@ -55,9 +32,10 @@ This program will demostrate how to use Timer_A to create periodic tasks and use
 | 2 | OUT | Output. For output mode 0, this bit directly controls the state of the output. <br> 0: Output low <br> 1: Output high|
 | 1 | COV | Capture overflow. THis bit indicates a capture overflow occured. COV mst be reset with software. <br> 0: No capture overflow occured <br> 1: Capture overflow occured|
 | 0 | CCIFG | Capture/compare interrupt flag <br> 0: No interrupt pending <br> 1: Interrupt pending |
-    * TIMER_Ax->CCTL
+  * TIMER_Ax->CCTL
 
 Example of how to set the Timer_A timer. The following code will set the interrupt to run .02 second or 20ms.
+
 ~~~c
 TIMER_A0->CTL |= TIMER_A_CTL_TASSEL_2| TIMER_A_CTL_MC_1; // SMLCK and UP-MODE
 TIMER_A0->CCR[0] = 60000 - 1; //CCR max is 65k,  3Mhz/ 60k -> 50, 50 cycles for 1 second
