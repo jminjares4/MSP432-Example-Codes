@@ -1,4 +1,4 @@
-# **Universal Asynchronous Receiver and Transmitter (UART) Echo :zap:**
+# **UART Echo :zap:**
 
 ## **Description**
 This program will demostrate how to transmit characters through Universal Asynchronous Receiver and Transmitter (UART). 
