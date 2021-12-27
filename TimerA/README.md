@@ -1,4 +1,4 @@
-# **SysTick Timer :zap:**
+# **TimerA :zap:**
 
 ## ***Table of Contents***    
 * [Multiple TimerA](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/TimerA/Multiple%20TimerA): Demostration of how to use various TimerA interrupts
