@@ -1,4 +1,4 @@
-# **Universal Asynchronous Receiver and Transmitter (UART) Echo :zap:**
+# **Universal Asynchronous Receiver and Transmitter (UART) with Interrupt :zap:**
 
 ## **Description**
 This program will demostrate how to received characters through Universal Asynchronous Receiver and Transmitter (UART) via an interrupt and do corresponding subroutines. 
