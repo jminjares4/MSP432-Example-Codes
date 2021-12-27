@@ -1,4 +1,4 @@
-# **Timer_A :zap:**
+# **Analog-to-Digital Converter :zap:**
 
 ## **Description**
 The following program demonstrates a ADC set for a single channel ADC. The ADC will use a 14-bit resolution, and will use P5.0 as the channel that it is reading from. Using the ADC memory, the program will toggle an on-board LED if the ADC reading is equal to or less than 1.14V.
