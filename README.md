@@ -15,11 +15,11 @@ This repository will contain various examples of TI MSP432 Microcontroller. The 
 ## **TODO**
   - [x] Create examples for peripherals 
   - [x] Create README for each example
-  - [ ] ADC Documenation
-  - [ ] UART Documenation 
-  - [ ] Separate all peripheral in their own subdirectory
+  - [ ] ADC Documenation -> Jorge
+  - [x] UART Documenation 
+  - [x] Separate all peripheral in their own subdirectory
+    - [x] Add proper documenation
     - [ ] Create READMEs for each directory
-    - [ ] Add proper documenation
   - [ ] Add links for the code examples
 
 ## **Good Books for MSP432P401R**
