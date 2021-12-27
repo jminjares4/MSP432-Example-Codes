@@ -1,4 +1,4 @@
-# **LED with Interrupts :zap:**
+# **Button Interrupts :zap:**
 
 ## **Description**
 This program will demostrate how to use GPIO inputs to select different led colors using interrupts. This example uses `pull-down` configuration!
