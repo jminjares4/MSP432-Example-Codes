@@ -4,6 +4,7 @@
 This program will demostrate how to use Timer_A to create pulse width modulation (PWM) signals. The following program will increase and reset the duty cycle of the PWM or essentially brightness of the LED. 
 
 ## **Pinout**
+![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
 - Texas Instrument
 
 ## **SG90 Servo Motor Pinout**

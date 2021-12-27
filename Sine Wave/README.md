@@ -4,6 +4,7 @@
 This program will demostrate how to use Timer_A to create pulse width modulation (PWM) signals to generate a `sine wave`. The following program will iterate an array that consist of various points of a sine wave.
 
 ## **Pinout**
+![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
 - Texas Instrument
 
 ## **MSP432 Timer_A Configuration Table 1**
