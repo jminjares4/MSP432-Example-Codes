@@ -1,4 +1,4 @@
-# **Liquid Crystal Display (LCD) :zap:**
+# **Liquid Crystal Display (LCD) with Interrupts :zap:**
 
 ## **Description**
 This program will demostrate how to use lcdLib that was developed by previous alumnis at **UTEP**!
