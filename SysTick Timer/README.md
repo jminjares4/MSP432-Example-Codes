@@ -3,7 +3,7 @@
 ## ***Table of Contents***    
  * [Simple Timer]() -> Simple timer using SysTick 
  * [Stop Watch]() | Create a stop watch using interrupt to control the SysTick Timer 
- * [SysTick with Interrupt]() 
+[SysTick with Interrupt]() 
    * Use interrupt to control the state of the SysTick Timer  
 
 ## **Authors:**
