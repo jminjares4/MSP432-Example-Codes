@@ -1,4 +1,4 @@
-# **Analog-to-Digital Converter (ADC) 3-Axis Accelerometer :zap:**
+# **3-Axis Accelerometer (ADC) :zap:**
 
 ## **Description**
 This program will read multiple channels of ADC to determine the position of an Accelerometer. In addition the program will contain structures related to the Accelerometer(The x, y, and z-axis). Once the ADC gathers the readings, they will be displayed onto an Liquid Crystal Display (LCD).
