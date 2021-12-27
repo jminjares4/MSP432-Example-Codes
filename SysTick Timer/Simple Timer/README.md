@@ -1,4 +1,4 @@
-# **SysTick Timer :zap:**
+# **Simple Timer :zap:**
 
 ## **Description**
 This program will demostrate how to use SysTick to create periodic tasks. The following code will toggle
