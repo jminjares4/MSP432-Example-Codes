@@ -1,7 +1,7 @@
 # **3-Axis Accelerometer :zap:**
 
 ## **Description**
-This program will read multiple channels of ADC to determine the position of an Accelerometer. In addition the program will contain structures related to the Accelerometer(The x, y, and z-axis). Once the ADC gathers the readings, they will be displayed onto an Liquid Crystal Display (LCD).
+This program will read multiple channels of ADC to determine the position of an `Accelerometer (ADXL335)`. In addition the program will contain structures related to the Accelerometer(The x, y, and z-axis). Once the ADC gathers the readings, they will be displayed onto an `Liquid Crystal Display (LCD)`.
 
 ## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)

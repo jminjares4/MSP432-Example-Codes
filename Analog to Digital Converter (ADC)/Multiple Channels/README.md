@@ -1,7 +1,7 @@
 # **Multiple Channels :zap:**
 
 ## **Description**
-This program will demostrate how to set up ADC using multiple channels. Using ADC the program store the information from P5.0 and P5.1 and displays their memory onto an Liquid Crystal display(LCD).
+This program will demostrate how to set up ADC using multiple channels. The program will use the following channels `P5.0` and `P5.1` and displays the channels readings onto an `Liquid Crystal display (LCD)`.
 
 ## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)

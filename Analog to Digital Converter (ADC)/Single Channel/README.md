@@ -1,7 +1,7 @@
 # **Single Channel :zap:**
 
 ## **Description**
-The following program demonstrates a ADC set for a single channel ADC. The ADC will use a 14-bit resolution, and will use P5.0 as the channel that it is reading from. Using the ADC memory, the program will toggle an on-board LED if the ADC reading is equal to or less than 1.14V.
+The following program demonstrates how to use a single ADC channel. The software will trigger the ADC reading after some delay. If the reading exceeds a provided threshold and change the state on an onboard LED accordingly. 
 
 ## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
