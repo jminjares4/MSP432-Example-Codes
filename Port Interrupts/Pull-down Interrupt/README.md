@@ -1,7 +1,7 @@
-# **Interrupt Bit Shifts :zap:**
+# **Pull-down Interrupt :zap:**
 
 ## **Description**
-This program will demostrate how to use interrupts and control a global variable. The interrupt configuration of the following program is at `pull-up`!
+This program will demostrate how to use GPIO inputs to select different led colors using interrupts. This example uses `pull-down` configuration!
 
 ## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
