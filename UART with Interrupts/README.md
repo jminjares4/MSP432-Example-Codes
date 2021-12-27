@@ -1,7 +1,8 @@
 # **Universal Asynchronous Receiver and Transmitter (UART) Echo :zap:**
 
 ## **Description**
-This program will demostrate how to transmit characters through Universal Asynchronous Receiver and Transmitter (UART). 
+This program will demostrate how to received characters through Universal Asynchronous Receiver and Transmitter (UART) via an interrupt and do corresponding subroutines. 
+
 ## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
 - Texas Instrument

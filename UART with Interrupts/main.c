@@ -2,7 +2,7 @@
  * @file main.c
  * @author Jesus Minjares (https://github.com/jminjares4)
  * @author Jorge Minjares (https://github.com/JorgeMinjares)
- * @brief This is a simple input code to demostrate the use of UART with interrupts.
+ * @brief Use UART interrupt to trigger different subroutine based on the recieved data
  * @version 0.1
  * @date 2021-12-26
  *
