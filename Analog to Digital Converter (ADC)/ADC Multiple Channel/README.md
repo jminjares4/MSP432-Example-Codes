@@ -1,4 +1,4 @@
-# **Analog-to-Digital Converter :zap:**
+# **Analog-to-Digital Converter (ADC) :zap:**
 
 ## **Description**
 This program will demostrate how to set up ADC using multiple channels. Using ADC the program store the information from P5.0 and P5.1 and displays their memory onto an Liquid Crystal display(LCD).
