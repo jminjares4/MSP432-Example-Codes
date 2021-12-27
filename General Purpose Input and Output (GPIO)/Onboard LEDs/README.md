@@ -1,12 +1,13 @@
-# **Blinky LEDs :zap:**
+# **Onboard LEDs :zap:**
 
 ## **Description**
-This code toggles the `on-board LEDs` to blink at a rate of 500000 cycles. 
+This code toggles use all the possible comnbinations of hte `on-board LEDs` to generate various colors. All the combination
+will be store in MACROs and then create an global array to iterate over to display the different LEDs colors. 
 
 ## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
   - Texas Instrument
-
+  
 ## **Authors:**
   - [Jesus Minjares](https://github.com/jminjares4) :zap:
     - Master of Science in Computer Engineering

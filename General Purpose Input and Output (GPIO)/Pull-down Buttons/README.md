@@ -1,7 +1,7 @@
-# **LED Controller 2 :zap:**
+# **Pull-down Buttons :zap:**
 
 ## **Description**
-This program will demostrate how to use GPIO inputs to select different led sequences based on previous code. This example uses `pull-up` configuration!
+This program will demostrate how to use GPIO inputs to select different led sequences based on previous code. This example uses `pull-down` configuration!
 
 ## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
@@ -16,7 +16,7 @@ This program will demostrate how to use GPIO inputs to select different led sequ
 | 1     | x     |  x    |  Output         |
   * I/O Configuration
 
-## **LEDs** 
+## **LEDs**
 | **Color** | **Voltage (V)** | **Current (mA)** |
 |:---   | :---:       |     ---:     |
 | Red   | 1.8-2.4     |      20      |
