@@ -44,7 +44,7 @@ void main(void)
     ADC14->CTL0 |= ADC14_CTL0_SHP | ADC14_CTL0_CONSEQ_1 | ADC14_CTL0_MSC | ADC14_CTL0_ON;
     ADC14->MCTL[0] |= ADC14_MCTLN_INCH_5;                   // Select P5.0 as ADC Channel
     ADC14->MCTL[1] |= ADC14_MCTLN_INCH_4;                   // Select P5.1 as ADC Channel
-    ADC14->MCTL[2] |= ADC14_MCTLN_INCH_3 | ADC14_MCTLN_EOS; // Select P5.2 as ADC Channel
+    ADC14->MCTL[2] |= ADC14_MCTLN_INCH_3 | ADC14_MCTLN_EOS; // Select P5.2 as ADC Channel and set P5.2 as the last ADC Channel
     ADC14->CTL1 |= ADC14_CTL1_RES__14BIT;                   // Select bit resolution
     ADC14->IER0 |= ADC14_IER0_IE2;                          // Enable interrupt for mem 0
 
