@@ -1,7 +1,7 @@
-# **GPIO BUttons :zap:**
+# **Pull-up Buttons :zap:**
 
 ## **Description**
-This program will demostrate how to use GPIO inputs to turn on and off the external `LEDs`.
+This program will demostrate how to use GPIO inputs to select different led sequences based on previous code. This example uses `pull-up` configuration!
 
 ## **Pinout**
 ![image](https://user-images.githubusercontent.com/60948298/146273491-d2079ae0-385a-4f9a-ac03-24f95911efea.png)
@@ -15,6 +15,18 @@ This program will demostrate how to use GPIO inputs to turn on and off the exter
 | 0     | 1     |  1    |  Input with pullup resistor |
 | 1     | x     |  x    |  Output         |
   * I/O Configuration
+
+## **LEDs** 
+| **Color** | **Voltage (V)** | **Current (mA)** |
+|:---   | :---:       |     ---:     |
+| Red   | 1.8-2.4     |      20      |
+| Yellow| 2.0-2.2     |      20      |
+| Green | 3.0-3.4     |      20      |
+| Blue  | 3.0-3.4     |      20      | 
+| White | 3.0-3.4     |      20      |
+  * Table 1 Typical LED with voltage and current requirements
+## **LEDs Circuit**
+<img src="https://user-images.githubusercontent.com/60948298/146442932-b87b92c4-9241-40eb-b26e-057f261b8fbc.png" width="450" height="250">
 
 ## **Pull-up and Pull-down Configuration**
 
