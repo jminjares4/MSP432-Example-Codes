@@ -1,4 +1,4 @@
-# **Port Interrupts :zap:**
+# **Pulse Width Modulation (PWM) :zap:**
 
 ## ***Table of Contents***
 * [Dimmer](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/Pulse%20Width%20Modulation%20(PWM)/Dimmer) : Control an LED brightness using Pulse Width Modulation (PWM)
