@@ -41,10 +41,10 @@ void main(void)
 void sendString(char *str)
 {
 	int i; // create variable
+	// iterate over the end of the string
 	for (i = 0; str[i] != '\0'; i++)
-	{ // iterate over the end of the string
-		while (!(EUSCI_A2->IFG & EUSCI_A_IFG_TXIFG))
-			;					  // wait until is ready to transmit
-		EUSCI_A2->TXBUF = str[i]; // send character through buffer
+	{ 
+		while (!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG)); // wait until is ready to transmit
+		EUSCI_A0->TXBUF = str[i]; // send character through buffer
 	}
 }
