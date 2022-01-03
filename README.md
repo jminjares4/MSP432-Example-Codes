@@ -33,9 +33,6 @@ This repository will contain various examples of TI MSP432 Microcontroller. The 
 ## **License**
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-### *Latest Version*
-[![version](https://img.shields.io/badge/release-v1.0)](https://github.com/jminjares4)
-
 ## **Authors:**
   - [Jesus Minjares](https://github.com/jminjares4) :zap:
     - Master of Science in Computer Engineering
