@@ -2,7 +2,7 @@
 
 ## **Description**
 This program will demostrate how to use lcdLib that was developed by previous alumnis at **UTEP**!
-The library is simple custom driver to be able to us the LCD. However, I made some slight changes 
+The library is simple custom driver to be able to use the LCD. However, I made some slight changes 
 such as changing the P4X registers to P4->X as well as renaming the library. `lcdLib_432` to `lcdLib`.
 
 ## **Pinout**
