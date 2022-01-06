@@ -13,7 +13,7 @@ This repository will contain various examples of TI MSP432 Microcontroller. The 
 - [SysTick Timer](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/SysTick%20Timer)
 - [TimerA](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/TimerA)
 - [Universal Asynchronous Reciever and Transmitter (UART)](https://github.com/jminjares4/MSP432-Example-Codes/tree/main/Universal%20Asynchronous%20Receiver%20and%20Transmitter%20(UART))
-
+- [User-manual]()
 ## **Good Books for MSP432P401R**
 [TI MSP432 ARM Programming for Embedded Systems](https://www.amazon.com/MSP432-Programming-Embedded-Systems-books/dp/0997925914)
 * Highly recommend for a good introductory to MSP432P401R 
