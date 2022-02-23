@@ -17,7 +17,6 @@ void main(void)
 
 	// Output
 	P2->DIR |= BIT4;	 // set BIT4 as OUTPUT
-	P2->OUT |= BIT4;	 // set BIT4 as HIGH!! we want it on
 	P2->SEL0 |= BIT4;	 // enable select 0 for PWM
 	P2->SEL1 &= ~(BIT4); // disable select 1
 

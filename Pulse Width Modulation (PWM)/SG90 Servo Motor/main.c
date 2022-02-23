@@ -23,7 +23,6 @@ void main(void)
 	WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD; // stop watchdog timer
 	// Enable Port 2 Bit 4 as an output pin
 	P2->DIR |= BIT4;	 // Bit set Port 2: Bit 4
-	P2->OUT |= BIT4;	 // Bit set Port 2: Bit 4
 	P2->SEL0 |= BIT4;	 // Bit set Port 2: Bit 4 to use Special Functions
 	P2->SEL1 &= ~(BIT4); // Bit Clear SEL1
 	// Enable PWM using TimerA

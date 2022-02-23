@@ -18,7 +18,6 @@ void main(void)
 	// Enable PWM pins
 	// Outputs
 	P2->DIR |= (BIT4 | BIT5 | BIT6 | BIT7);	  // enable 0xF0 as output
-	P2->OUT |= (BIT4 | BIT5 | BIT6 | BIT7);	  // set 0xF0 as high
 	P2->SEL0 |= (BIT4 | BIT5 | BIT6 | BIT7);  // enable select 0 for pwm configuration
 	P2->SEL1 &= ~(BIT4 | BIT5 | BIT6 | BIT7); // disable select 1
 

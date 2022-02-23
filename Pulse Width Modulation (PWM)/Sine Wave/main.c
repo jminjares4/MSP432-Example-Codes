@@ -20,7 +20,6 @@ void main(void)
 
 	// Enable Port 2: BIT 6 as output port
 	P2->DIR |= BIT6;	 // Bit Set Port 2: BIT6
-	P2->OUT |= (BIT6);	 // Bit Set Port 2: BIT6
 	P2->SEL0 |= BIT6;	 // Bit Set Port 2: BIT6 for special functions
 	P2->SEL1 &= ~(BIT6); // Bit Clear Port 2: BIT6 SEL1
 
