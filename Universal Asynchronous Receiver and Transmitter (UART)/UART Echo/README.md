@@ -46,7 +46,7 @@ EUSCI_A0->MCTLW = (9 << EUSCI_A_MCTLW_BRF_OFS | EUSCI_A_MCTLW_OS16); // 19.53125
 ~~~c
 // Assuming SMLCK -> 3MHz and Baudrate (BR) -> 9600 
 // Using UART 0 
-EUSCI_A0->BRW = 19; // SMCLK/BR -> 3000000//9600 = 312
+EUSCI_A0->BRW = 312; // SMCLK/BR -> 3000000//9600 = 312
 EUSCI_A0->MCTLW = 0; // Disable oversampling	
 ~~~
 
