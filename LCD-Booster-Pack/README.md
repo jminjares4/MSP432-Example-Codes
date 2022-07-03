@@ -16,7 +16,11 @@ The board was developed in [*EasyEDA*](https://easyeda.com/).
 <img src="images/lcd_booster-pack-schematic.png">
 
 ## **3D View**
-<img src="GIF/lcd_boosterpack.gif">
+<div align="center">
+  <video controls loop height="500" width="800">
+      <source src="media/lcd_booster.mov" alt="">
+  </video>
+</div>
 
 ## **Authors:**
 * [**Jesus Minjares** :zap:](https://github.com/jminjares4)<br>
