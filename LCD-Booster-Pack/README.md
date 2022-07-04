@@ -17,9 +17,8 @@ The board was developed in [*EasyEDA*](https://easyeda.com/).
 <img src="images/lcd_booster-pack-schematic.png">
 
 ## **3D View**
-<div align="center">
-  <img src="media/lcd_booster.gif">
-</div>
+<img src="media/lcd_booster.gif">
+
 
 ## **Authors:**
 * [**Jesus Minjares** :zap:](https://github.com/jminjares4)<br>
