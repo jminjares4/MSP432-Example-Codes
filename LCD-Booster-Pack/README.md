@@ -6,6 +6,7 @@ The **LCD Boosterpack** is a custom `printed circuit board` *(PCB)* for the **MS
 - [x] SMD onboard LEDs
 - [x] Quick deployment for LCD 16x02
 - [x] Power LED 
+- [x] Added pin number on top silkscreen 
 
 ## Electronic Design Automation
 The board was developed in [*EasyEDA*](https://easyeda.com/). 
@@ -17,9 +18,7 @@ The board was developed in [*EasyEDA*](https://easyeda.com/).
 
 ## **3D View**
 <div align="center">
-  <video controls loop height="500" width="800">
-      <source src="media/lcd_booster.mov" alt="">
-  </video>
+  <img src="media/lcd_booster.gif">
 </div>
 
 ## **Authors:**
