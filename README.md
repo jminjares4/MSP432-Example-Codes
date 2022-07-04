@@ -33,7 +33,7 @@ This repository will contain various examples of *TI MSP432 Microcontroller*. Th
 ## **License and Release**
 | License | Release |
 | :---:   | :---:   |
-| [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) | [![Version Release](https://img.shields.io/github/v/release/jminjares4/MSP432-Example-Codes?include_prereleases)](https://github.com/jminjares4/MSP432-Example-Codes/releases/tag/v1.0.0) |
+| [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) | [![Version Release](https://img.shields.io/github/v/release/jminjares4/MSP432-Example-Codes)](https://github.com/jminjares4/MSP432-Example-Codes/releases/) |
 
 ## **Authors:**
 * [**Jesus Minjares** :zap:](https://github.com/jminjares4)<br>
