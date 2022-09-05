@@ -22,8 +22,8 @@ void main(void)
 	// clear BIT0
 	P1->OUT &= ~(BIT0);
 	// Clear secondary functions
+	P1->SEL0 &= ~(BIT0);
 	P1->SEL1 &= ~(BIT0);
-	P1->SEL2 &= ~(BIT0);
 
 	while (1)
 	{
