@@ -54,9 +54,7 @@ void main(void)
 
     // enable global interrupts
     __enable_irq();
-    while (1) // empty loop
-    {
-    }
+    while (1);
 }
 void TA0_0_IRQHandler(void)
 {

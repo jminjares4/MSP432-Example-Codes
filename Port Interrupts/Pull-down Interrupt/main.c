@@ -40,9 +40,7 @@ void main(void)
 	NVIC->ISER[1] = 1 << ((PORT4_IRQn)&31); // see NVIC table, all PORTx go in ISER[1]
 
 	__enable_irq(); // enable global interrupts
-	while (1)		// empty loop
-	{
-	}
+	while (1);
 }
 
 void PORT4_IRQHandler(void)

@@ -29,9 +29,9 @@ void main(void)
 
 	// Set custom text
 	char buffer[16]; // lcd text length
-	sprintf(buffer, "Custom: %.2lf", 98.2f);
+    sprintf(buffer, "ECE! %.2lf, %c, %d", 3.14, 'A', 1);
+    lcdSetText(buffer, x, y);
 
 	lcdSetText(buffer, 0, 1); // set to bottom line
-	while (1)
-		;
+	while (1);
 }
