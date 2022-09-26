@@ -67,9 +67,7 @@ void main(void)
 
     sendString("Enter r for red, g for green, b for blue!\r\n"); // send message
 
-    while (1)
-    {
-    }
+    while (1);
 }
 
 void EUSCIA0_IRQHandler(void)

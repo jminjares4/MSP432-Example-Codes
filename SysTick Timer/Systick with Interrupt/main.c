@@ -52,9 +52,7 @@ void main(void)
 	__enable_irq();
 
 	// infinite loop for embedded system
-	while (1)
-	{
-	}
+	while (1);
 }
 
 void SysTick_Handler(void)
